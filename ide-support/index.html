@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="/brand/png/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/brand/png/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/brand/png/momentum-app-180.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0023ae"><link rel="canonical" href="https://trymomentum.github.io/ide-support/"><title>IDE support — momentum docs</title><meta name="description" content="How momentum installs in opencode, Claude Code, Codex, Antigravity today — and what's coming for Cursor and Gemini CLI."><meta property="og:type" content="website"><meta property="og:title" content="IDE support — momentum docs"><meta property="og:description" content="How momentum installs in opencode, Claude Code, Codex, Antigravity today — and what's coming for Cursor and Gemini CLI."><meta property="og:url" content="https://trymomentum.github.io/ide-support/"><meta property="og:image" content="https://trymomentum.github.io/og/default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="IDE support — momentum docs"><meta name="twitter:description" content="How momentum installs in opencode, Claude Code, Codex, Antigravity today — and what's coming for Cursor and Gemini CLI."><meta name="twitter:image" content="https://trymomentum.github.io/og/default.png"><script>(function(){try{var t=localStorage.getItem('mm-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:'light';}catch(e){document.documentElement.dataset.theme='light';}})();</script><script>(function(){try{if(sessionStorage.getItem('mm-swept')){document.documentElement.classList.add('mm-swept');}else{sessionStorage.setItem('mm-swept','1');}}catch(e){}})();</script><link rel="stylesheet" href="/_astro/Icon.CfDLM5Ju.css">
+<link rel="stylesheet" href="/_astro/_..D1_BWr6T.css"></head> <body> <div class="ambient-layer" aria-hidden="true"></div> <div class="page mm-docs">  <header class="tb"> <nav class="tb-pillbar"> <a class="mm-brand tb-brand" href="/" aria-label="momentum"> <svg class="mm-mark" viewBox="0 0 48 48" width="24" height="24" fill="none" aria-hidden="true"> <path class="c c1" d="M11 15 20 24 11 33"></path> <path class="c c2" d="M20 15 29 24 20 33"></path> <path class="c c3" d="M29 15 38 24 29 33"></path> </svg> <span class="mm-word">momentum</span>  <span class="tb-pill">docs</span>  </a>  <script type="module">const t=document.documentElement;t.classList.contains("mm-swept")||window.setTimeout(()=>t.classList.add("mm-swept"),850);const s=window.matchMedia("(prefers-reduced-motion: reduce)");for(const e of document.querySelectorAll(".mm-brand"))e.addEventListener("mouseenter",()=>{s.matches||(e.classList.remove("mm-sweep"),e.getBoundingClientRect(),e.classList.add("mm-sweep"))});</script> <button type="button" class="tb-search" data-open-palette aria-label="Search docs"> <svg width="1em" height="1em" class="ic" data-icon="lucide:search">   <symbol id="ai:lucide:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:lucide:search"></use>  </svg> <span>Search docs</span> <kbd>⌘K</kbd> </button> <div class="tb-right"> <button type="button" class="tb-icon tb-menu" data-toggle-sidebar aria-label="Toggle navigation"> <svg width="1em" height="1em" class="ic" data-icon="lucide:menu">   <symbol id="ai:lucide:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></symbol><use href="#ai:lucide:menu"></use>  </svg> </button> <button type="button" class="tb-icon" data-toggle-theme aria-label="Toggle theme"> <svg width="1em" height="1em" class="ic" data-icon="lucide:sun-moon">   <symbol id="ai:lucide:sun-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m2.837 12.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4m7-3l-1.256 1.256M20 12h2"/></symbol><use href="#ai:lucide:sun-moon"></use>  </svg> </button> <a class="tb-icon" href="https://github.com/LiminaLabsAI/momentum" target="_blank" rel="noopener" aria-label="GitHub"> <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg> </a> </div> </nav> </header> <div class="docs-grid" id="top"> <!-- SIDEBAR --> <aside class="sidebar" data-sidebar> <nav> <div class="side-group"> <p class="side-label">Start here</p> <a class="side-link" href="/getting-started/"> Getting started </a><a class="side-link" href="/concepts/"> Concepts </a><a class="side-link" href="/parallel-work/"> Parallel work </a> </div><div class="side-group"> <p class="side-label">Reference</p> <a class="side-link" href="/skills/"> Skills </a><a class="side-link" href="/rules/"> Rules </a><a class="side-link active" href="/ide-support/" aria-current="page"> IDE support </a> </div><div class="side-group"> <p class="side-label">Orchestration</p> <a class="side-link" href="/ecosystem/"> Ecosystem </a><a class="side-link" href="/orchestration/"> Cross-project actions </a><a class="side-link" href="/team/"> Team mode </a><a class="side-link" href="/swarm/"> Swarm </a> </div><div class="side-group"> <p class="side-label">More</p> <a class="side-link" href="/faq/"> FAQ </a><a class="side-link" href="/about/"> About </a> </div> </nav> </aside> <div class="sidebar-scrim" data-sidebar-scrim aria-hidden="true"></div> <!-- ARTICLE --> <main class="article"> <div class="doc-wrap"> <div class="doc-crumb"> Reference<span class="sep">›</span><span class="cur">IDE support</span> </div> <div class="doc-head"> <h1>IDE support</h1> </div> <p class="doc-lead">How momentum installs in opencode, Claude Code, Codex, Antigravity today — and what&#39;s coming for Cursor and Gemini CLI.</p> <article class="doc"> <p>momentum is <strong>agent-agnostic</strong>. The same commands, rules, and workflow ship
+to every adapter; what changes is where the instruction file lives, how
+hooks attach, and which slash-command surface the IDE exposes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Agent</th><th>Status</th><th>Primary instruction file</th><th>Hook surface</th><th>Slash commands</th></tr></thead><tbody><tr><td><a href="#opencode">opencode</a></td><td>Available</td><td><code>AGENTS.md</code></td><td><code>.opencode/plugins/momentum.js</code> — tool.execute.before/after + session banners via the event bus</td><td>Native <code>.opencode/commands/*.md</code></td></tr><tr><td><a href="#claude-code">Claude Code</a></td><td>Available</td><td><code>CLAUDE.md</code></td><td><code>.claude/settings.json</code> — PreToolUse, PostToolUse, SessionStart</td><td>Native <code>.claude/commands/*.md</code></td></tr><tr><td><a href="#codex">Codex</a></td><td>Testing pending</td><td><code>AGENTS.md</code></td><td><code>.codex/hooks.json</code> (PreToolUse / PostToolUse / SessionStart, <code>apply_patch|Bash</code>)</td><td>Native skills at <code>.agents/skills/&#x3C;name>/SKILL.md</code></td></tr><tr><td><a href="#antigravity">Antigravity</a></td><td>Available</td><td><code>AGENTS.md</code></td><td><code>.agents/hooks.json</code> (`run_command</td><td>view_file</td></tr><tr><td><a href="#cursor">Cursor</a></td><td>Planned (Phase 19 — Reach)</td><td><code>.cursor/rules/</code></td><td>TBD</td><td>Rules-based prompt fragments</td></tr><tr><td><a href="#gemini-cli">Gemini CLI</a></td><td>Planned (Phase 19 — Reach)</td><td><code>GEMINI.md</code></td><td>TBD</td><td>Embedded sections</td></tr></tbody></table>
+<blockquote>
+<p><strong>Status legend.</strong> <em>Available</em> = installed adapter + live-runtime verified. <em>Testing pending</em> = adapter ships and unit-tests pass, but full live-runtime smoke against the actual CLI is still being validated (tracked as VAL-001 for Codex). <em>Planned</em> = adapter not yet built.</p>
+</blockquote>
+<h2 id="opencode">opencode</h2>
+<p>Fully live-validated adapter — every capability momentum tracks is lit
+(hooks, slash commands, subagents, parallel subagents, skills, session
+banners), each earned against the real opencode runtime.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> opencode</span></span></code></pre>
+<h3 id="what-you-get">What you get</h3>
+<ul>
+<li><strong><code>AGENTS.md</code></strong> at the project root — opencode’s primary instruction file,
+generated from momentum’s single-source rulebook.</li>
+<li><strong><code>.opencode/commands/*.md</code></strong> — every momentum recipe as a native slash
+command, with <code>description</code> frontmatter for the TUI command picker.</li>
+<li><strong><code>.opencode/plugins/momentum.js</code></strong> — one self-contained plugin wiring the
+whole enforcement layer: the brainstorm gate (blocks the tool call by
+throwing), the Rule 8 history reminder, session-start banners (ecosystem
+context + pending handoffs), and the ecosystem session log (commit / PR
+events append automatically).</li>
+<li><strong><code>.opencode/agents/*.md</code></strong> — three reviewer subagents (security, QA,
+architecture) with sandbox-level read-only permissions (<code>edit: deny</code> +
+bash allowlist), plus the swarm supervisor.</li>
+<li><strong><code>.opencode/skills/momentum-orient/SKILL.md</code></strong> — Rule 1 orientation as a
+native skill, loaded on demand by opencode’s skill tool.</li>
+</ul>
+<h3 id="hook-compatibility">Hook compatibility</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Hook</th><th>What it does</th><th>When it fires</th></tr></thead><tbody><tr><td><strong><code>tool.execute.before</code></strong></td><td>Brainstorm gate — throws on write-class tools targeting <code>specs/</code> while <code>.momentum/brainstorm-active</code> exists</td><td>Before every tool call</td></tr><tr><td><strong><code>tool.execute.after</code></strong></td><td>History reminder for meaningful edits; bash completions feed the ecosystem session log (commit / PR events) via the shared hook scripts</td><td>After write-class and bash tool calls</td></tr><tr><td><strong><code>event</code> (session.created)</strong></td><td>Ecosystem context + pending-handoff banners — same output as every other adapter’s SessionStart hook</td><td>At session start in TUI and served sessions (excluded from <code>opencode run</code> non-interactive mode)</td></tr></tbody></table>
+<p>The plugin reads the same <code>.momentum/</code> sentinels and delegates to the same
+installed shell scripts as the other adapters — enforcement semantics are
+identical across platforms.</p>
+<h3 id="when-to-pick-opencode">When to pick opencode</h3>
+<p>When you want an open-source, terminal-first agent with momentum’s entire
+capability surface live-verified — including native project-level skills
+and parallel subagents, which no other adapter has validated yet.</p>
+<h2 id="claude-code">Claude Code</h2>
+<p>The richest hook surface today.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> claude-code</span></span></code></pre>
+<h3 id="what-you-get-1">What you get</h3>
+<ul>
+<li><strong><code>CLAUDE.md</code></strong> at the project root — Claude Code reads this automatically
+at session start.</li>
+<li><strong><code>.agent/rules/project.md</code></strong> — the 13 autonomous rules (referenced from
+<code>CLAUDE.md</code>).</li>
+<li><strong><code>.claude/commands/*.md</code></strong> — all 15+ slash commands available natively.</li>
+<li><strong><code>.claude/settings.json</code></strong> — hook wiring for the three hook surfaces.</li>
+<li><strong><code>scripts/check-history-reminder.sh</code></strong> — PostToolUse hook; reminds
+about Rule 8 after edits to significant files.</li>
+<li><strong><code>scripts/brainstorm-gate.sh</code></strong> — PreToolUse hook; blocks Write/Edit
+on <code>specs/</code> paths during <code>/brainstorm-phase</code>.</li>
+<li><strong><code>scripts/sessionstart-handoff.sh</code></strong> — SessionStart hook; auto-greets
+pending handoffs in <code>.momentum/inbox/</code>.</li>
+</ul>
+<h3 id="hook-compatibility-1">Hook compatibility</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Hook</th><th>What it does</th><th>When it fires</th></tr></thead><tbody><tr><td><strong>PreToolUse</strong> (<code>brainstorm-gate.sh</code>)</td><td>Blocks <code>Write</code>/<code>Edit</code>/<code>MultiEdit</code> calls targeting <code>specs/</code> paths when <code>.momentum/brainstorm-active</code> exists</td><td>Before every tool call during a brainstorm session</td></tr><tr><td><strong>PostToolUse</strong> (<code>check-history-reminder.sh</code>)</td><td>Reminds the agent to log a history entry when significant files (status, backlog, phase tasks, decisions, architecture) are edited; opportunistically appends to ecosystem session log</td><td>After every Write/Edit/Bash call</td></tr><tr><td><strong>SessionStart</strong> (<code>sessionstart-handoff.sh</code>)</td><td>Scans <code>.momentum/inbox/</code> for pending handoffs, banners + <code>[y/skip]</code> prompt</td><td>At each new session start</td></tr></tbody></table>
+<p>Hooks are the strongest discipline-enforcement layer: brainstorm-gate
+physically prevents premature disk writes, the history reminder closes the
+“I’ll log it later” failure mode, SessionStart eliminates the “did anyone
+hand work off to me?” check.</p>
+<h3 id="when-to-pick-claude-code">When to pick Claude Code</h3>
+<p>When you want the strongest discipline. The hooks make Rules 7 (brainstorm
+gate), 8 (history), and the handoff pickup all enforced rather than
+contractual.</p>
+<h2 id="codex">Codex</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> codex</span></span></code></pre>
+<h3 id="what-you-get-2">What you get</h3>
+<ul>
+<li><strong><code>AGENTS.md</code></strong> — Codex’s primary instruction file (analogous to CLAUDE.md).</li>
+<li><strong><code>.agent/rules/project.md</code></strong> — the 13 rules.</li>
+<li><strong><code>.agents/skills/&#x3C;name>/SKILL.md</code></strong> — each momentum recipe ships as a
+native Codex skill (<a href="https://developers.openai.com/codex/skills">skills docs</a>)
+with <code>name</code> + <code>description</code> frontmatter. Codex auto-discovers skills at
+session start across CLI, IDE, and desktop app, so <code>/brainstorm-phase</code>,
+<code>$brainstorm-phase</code>, and natural-language “run brainstorm-phase” all
+route to the same SKILL.md.</li>
+<li><strong><code>.codex/agents/*.toml</code></strong> — TOML reviewer subagents (security, QA,
+architecture) with <code>sandbox_mode = "read-only"</code>.</li>
+<li><strong><code>.codex/hooks.json</code></strong> — Codex hook config wiring the same three hook
+scripts as Claude Code. Hooks are stable + default-on in current Codex CLI;
+first run prompts you to trust each hook via <code>/hooks</code>.</li>
+</ul>
+<h3 id="hook-compatibility-2">Hook compatibility</h3>
+<p>Same three hook scripts as Claude Code — wired via <code>.codex/hooks.json</code>
+instead of <code>.claude/settings.json</code>. The discipline layer is the same; the
+configuration shape is per-adapter.</p>
+<h3 id="when-to-pick-codex">When to pick Codex</h3>
+<p>When you’re already using Codex and want momentum’s discipline without
+switching IDEs. Hook coverage matches Claude Code.</p>
+<h2 id="antigravity">Antigravity</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> antigravity</span></span></code></pre>
+<h3 id="what-you-get-3">What you get</h3>
+<ul>
+<li><strong><code>AGENTS.md</code></strong> — shared format with Codex.</li>
+<li><strong><code>.agent/rules/project.md</code></strong> — the 13 rules.</li>
+</ul>
+<h3 id="hook-compatibility-3">Hook compatibility</h3>
+<p>Antigravity has <strong>no hook surface</strong> today. The brainstorm-gate discipline
+relies on the markdown contract — the agent still respects the rule, but
+there’s no PreToolUse hook to physically enforce it. Similarly, no
+SessionStart greet for handoffs (use <code>/continue</code> explicitly).</p>
+<p>The contract still works — the brainstorm gate is documented in
+<code>/brainstorm-phase</code>’s body, and a well-behaved agent honors it. But the
+<strong>safety net</strong> is gone. If you accidentally tell the agent “just write the
+draft to disk so I can see it” mid-brainstorm, nothing physically stops it
+on Antigravity.</p>
+<h3 id="when-to-pick-antigravity">When to pick Antigravity</h3>
+<p>When you’re already on Antigravity and want momentum’s structure even
+without the hook enforcement layer. The discipline is still there; just
+trust-based.</p>
+<h2 id="cursor">Cursor</h2>
+<p><strong>Planned for Phase 19 — Reach.</strong> Cursor uses <code>.cursor/rules/*.mdc</code> files and
+doesn’t support slash commands the way Claude Code does. Commands will ship
+as rules-based prompt fragments — typing the command name will trigger the
+relevant rule.</p>
+<p>Hook surface: TBD as part of Phase 14 design. Cursor’s editor hooks are
+different from Claude Code’s session hooks; the brainstorm-gate equivalent
+may need a different enforcement strategy (e.g., a file-watcher rule that
+warns if the sentinel exists).</p>
+<p>Track progress: <a href="https://github.com/LiminaLabsAI/momentum/blob/main/specs/backlog/backlog.md">FEAT-007 in backlog</a>.</p>
+<h2 id="gemini-cli">Gemini CLI</h2>
+<p><strong>Planned for Phase 19 — Reach.</strong> Gemini CLI uses <code>GEMINI.md</code> as the primary
+instruction file (single-file convention). Workflow prompts will embed as
+sections within <code>GEMINI.md</code> rather than as separate command files.</p>
+<p>Hook surface: TBD. Gemini CLI’s plugin model may support before/after-tool
+hooks similar to Claude Code; if it does, the same three hook scripts will
+attach with minimal porting.</p>
+<p>Track progress: <a href="https://github.com/LiminaLabsAI/momentum/blob/main/specs/backlog/backlog.md">FEAT-008 in backlog</a>.</p>
+<h2 id="picking-an-adapter">Picking an adapter</h2>
+<p>If you have a choice today, <strong>Claude Code</strong> gives you the strongest
+discipline because hooks physically enforce the brainstorm gate and surface
+handoffs at session start. <strong>Codex</strong> is the close second — <code>AGENTS.md</code>
+auto-loads and <code>.codex/hooks.json</code> enforces the same discipline.
+<strong>Antigravity</strong> works fine but relies on agent compliance with the markdown
+contract rather than hook enforcement.</p>
+<p>If you’re already on Cursor or Gemini CLI, momentum will support both in
+Phase 14 — for now, you can wait, or use <code>--agent claude-code</code> to scaffold
+the structure and adapt it manually (the <code>specs/</code> skeleton is agent-agnostic;
+only <code>.claude/</code> and <code>CLAUDE.md</code> are Claude-specific).</p>
+<h2 id="multi-adapter-projects">Multi-adapter projects</h2>
+<p>If your team uses <strong>multiple agents</strong> (some on opencode, some on Claude
+Code, some on Codex), run <code>momentum init --agent &#x3C;first></code> and then
+<code>momentum upgrade --agent &#x3C;second></code> for each additional adapter. Both
+<code>CLAUDE.md</code> and <code>AGENTS.md</code> will exist; every adapter references the same
+<code>specs/</code> and shares the per-project state.</p>
+<p>As of v0.30.0, <code>.momentum/installed.json</code> tracks every installed adapter
+independently (<code>agents</code> map, ADR-0007), and upgrading one adapter never
+touches another adapter’s files — orphan cleanup is scoped per agent.
+(Releases before v0.30.0 had a destructive edge here — BUG-020 — where
+upgrading a second adapter removed the first one’s files; upgrade to
+v0.30.0+ before layering adapters.)</p>
+<h2 id="upgrading">Upgrading</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> upgrade</span></span></code></pre>
+<p>The upgrade is <strong>marker-aware</strong>: anything under <code>## Project Extensions</code> in
+<code>CLAUDE.md</code> / <code>AGENTS.md</code> is preserved across the upgrade. Default commands
+and rules update from the published template; project-specific content
+stays.</p>
+<p>Known regression: see <a href="https://github.com/LiminaLabsAI/momentum/blob/main/specs/backlog/backlog.md">BUG-006</a>
+for an upgrade-related title-line issue. Fix is on the backlog.</p>
+<h2 id="diagnosing-ide-setup">Diagnosing IDE setup</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> doctor</span></span></code></pre>
+<p>Walks the local layout: does the project look like a momentum-installed
+project? Are the rules referenced from the instruction file? Are the
+adapter files where they should be? Is the project an ecosystem member
+(if <code>ecosystem.json</code> is detectable in a sibling dir)?</p>
+<p>Reports detected issues plus suggested fixes. Run <code>doctor</code> first whenever
+something feels off; it catches the common “the instruction file isn’t
+loading” class of problems.</p> </article> <nav class="prevnext"> <a class="pn pn-prev" href="/rules/"> <span class="pn-dir">← Previous</span> <span class="pn-title">Rules</span> </a> <a class="pn pn-next" href="/ecosystem/"> <span class="pn-dir">Next →</span> <span class="pn-title">Ecosystem</span> </a> </nav> </div> </main> <!-- ON THIS PAGE --> <aside class="toc"> <div class="toc-inner"> <p class="side-label">On this page</p> <a class="toc-link" href="#opencode" data-toc="opencode"> opencode </a><a class="toc-link sub" href="#what-you-get" data-toc="what-you-get"> What you get </a><a class="toc-link sub" href="#hook-compatibility" data-toc="hook-compatibility"> Hook compatibility </a><a class="toc-link sub" href="#when-to-pick-opencode" data-toc="when-to-pick-opencode"> When to pick opencode </a><a class="toc-link" href="#claude-code" data-toc="claude-code"> Claude Code </a><a class="toc-link sub" href="#what-you-get-1" data-toc="what-you-get-1"> What you get </a><a class="toc-link sub" href="#hook-compatibility-1" data-toc="hook-compatibility-1"> Hook compatibility </a><a class="toc-link sub" href="#when-to-pick-claude-code" data-toc="when-to-pick-claude-code"> When to pick Claude Code </a><a class="toc-link" href="#codex" data-toc="codex"> Codex </a><a class="toc-link sub" href="#what-you-get-2" data-toc="what-you-get-2"> What you get </a><a class="toc-link sub" href="#hook-compatibility-2" data-toc="hook-compatibility-2"> Hook compatibility </a><a class="toc-link sub" href="#when-to-pick-codex" data-toc="when-to-pick-codex"> When to pick Codex </a><a class="toc-link" href="#antigravity" data-toc="antigravity"> Antigravity </a><a class="toc-link sub" href="#what-you-get-3" data-toc="what-you-get-3"> What you get </a><a class="toc-link sub" href="#hook-compatibility-3" data-toc="hook-compatibility-3"> Hook compatibility </a><a class="toc-link sub" href="#when-to-pick-antigravity" data-toc="when-to-pick-antigravity"> When to pick Antigravity </a><a class="toc-link" href="#cursor" data-toc="cursor"> Cursor </a><a class="toc-link" href="#gemini-cli" data-toc="gemini-cli"> Gemini CLI </a><a class="toc-link" href="#picking-an-adapter" data-toc="picking-an-adapter"> Picking an adapter </a><a class="toc-link" href="#multi-adapter-projects" data-toc="multi-adapter-projects"> Multi-adapter projects </a><a class="toc-link" href="#upgrading" data-toc="upgrading"> Upgrading </a><a class="toc-link" href="#diagnosing-ide-setup" data-toc="diagnosing-ide-setup"> Diagnosing IDE setup </a> </div> </aside> </div>  <div class="palette" data-palette hidden> <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search"> <div class="palette-head"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="ic" data-icon="lucide:search">   <use href="#ai:lucide:search"></use>  </svg> <input type="text" data-palette-input placeholder="Search pages and headings…" aria-label="Search pages and headings"> <kbd>esc</kbd> </div> <div class="palette-results" data-palette-results></div> </div> </div> <script type="application/json" id="mm-nav-data">{"pages":[{"slug":"getting-started","label":"Getting started","group":"Start here"},{"slug":"concepts","label":"Concepts","group":"Start here"},{"slug":"parallel-work","label":"Parallel work","group":"Start here"},{"slug":"skills","label":"Skills","group":"Reference"},{"slug":"rules","label":"Rules","group":"Reference"},{"slug":"ide-support","label":"IDE support","group":"Reference"},{"slug":"ecosystem","label":"Ecosystem","group":"Orchestration"},{"slug":"orchestration","label":"Cross-project actions","group":"Orchestration"},{"slug":"team","label":"Team mode","group":"Orchestration"},{"slug":"swarm","label":"Swarm","group":"Orchestration"},{"slug":"faq","label":"FAQ","group":"More"},{"slug":"about","label":"About","group":"More"}],"headings":[{"id":"opencode","label":"opencode"},{"id":"what-you-get","label":"What you get"},{"id":"hook-compatibility","label":"Hook compatibility"},{"id":"when-to-pick-opencode","label":"When to pick opencode"},{"id":"claude-code","label":"Claude Code"},{"id":"what-you-get-1","label":"What you get"},{"id":"hook-compatibility-1","label":"Hook compatibility"},{"id":"when-to-pick-claude-code","label":"When to pick Claude Code"},{"id":"codex","label":"Codex"},{"id":"what-you-get-2","label":"What you get"},{"id":"hook-compatibility-2","label":"Hook compatibility"},{"id":"when-to-pick-codex","label":"When to pick Codex"},{"id":"antigravity","label":"Antigravity"},{"id":"what-you-get-3","label":"What you get"},{"id":"hook-compatibility-3","label":"Hook compatibility"},{"id":"when-to-pick-antigravity","label":"When to pick Antigravity"},{"id":"cursor","label":"Cursor"},{"id":"gemini-cli","label":"Gemini CLI"},{"id":"picking-an-adapter","label":"Picking an adapter"},{"id":"multi-adapter-projects","label":"Multi-adapter projects"},{"id":"upgrading","label":"Upgrading"},{"id":"diagnosing-ide-setup","label":"Diagnosing IDE setup"}]}</script> </div></body></html>  <script type="module">const h=document.documentElement;for(const e of document.querySelectorAll("[data-toggle-theme]"))e.addEventListener("click",()=>{const t=h.dataset.theme==="dark"?"light":"dark";h.dataset.theme=t;try{localStorage.setItem("mm-theme",t)}catch{}});const g=document.querySelector(".docs-grid");for(const e of document.querySelectorAll("[data-toggle-sidebar]"))e.addEventListener("click",()=>g?.classList.toggle("nav-open"));document.querySelector("[data-sidebar-scrim]")?.addEventListener("click",()=>g?.classList.remove("nav-open"));for(const e of document.querySelectorAll(".doc pre")){const t=document.createElement("button");t.type="button",t.className="code-copy",t.textContent="Copy",t.addEventListener("click",()=>{const o=e.querySelector("code")?.innerText??e.innerText;navigator.clipboard?.writeText(o),t.textContent="Copied",window.setTimeout(()=>t.textContent="Copy",1200)}),e.appendChild(t)}const p=[...document.querySelectorAll(".toc-link")];if(p.length){const e=p.map(o=>o.getAttribute("data-toc")),t=()=>{let o=e[0];for(const n of e){const l=n&&document.getElementById(n);l&&l.getBoundingClientRect().top<=130&&(o=n)}for(const n of p)n.classList.toggle("active",n.getAttribute("data-toc")===o)};window.addEventListener("scroll",t,{passive:!0}),t()}const i=document.querySelector("[data-palette]"),r=document.querySelector("[data-palette-input]"),c=document.querySelector("[data-palette-results]");let f={pages:[],headings:[]};try{f=JSON.parse(document.getElementById("mm-nav-data")?.textContent||"{}")}catch{}function w(e){const t=e.trim().toLowerCase(),o=(f.headings||[]).map(a=>({icon:"hash",label:a.label,sub:"On this page",href:"#"+a.id,jump:!0})),n=(f.pages||[]).map(a=>({icon:"file",label:a.label,sub:a.group,href:"/"+a.slug+"/"}));let l=[...o,...n];return t&&(l=l.filter(a=>a.label.toLowerCase().includes(t)||(a.sub||"").toLowerCase().includes(t))),l.slice(0,8)}let s=0;function m(e){if(!c)return;if(!e.length){c.innerHTML='<div class="pal-empty">No matches</div>';return}const t='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>',o='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';c.innerHTML=e.map((n,l)=>`<a class="pal-item${l===s?" active":""}" href="${n.href}" data-i="${l}"${n.jump?' data-jump="1"':""}>${n.icon==="hash"?t:o}<span class="pal-label">${n.label}</span><span class="pal-sub">${n.sub}</span></a>`).join("")}let d=[];function y(){d=w(r&&"value"in r?r.value:""),s=0,m(d)}function v(){i&&(i.hidden=!1,r&&(r.value="",y(),setTimeout(()=>r.focus(),20)))}function u(){i&&(i.hidden=!0)}function b(e){if(e)if(e.dataset.jump){u();const t=e.getAttribute("href").slice(1),o=document.getElementById(t);o&&window.scrollTo({top:o.getBoundingClientRect().top+window.scrollY-76,behavior:"smooth"})}else window.location.href=e.getAttribute("href")}for(const e of document.querySelectorAll("[data-open-palette]"))e.addEventListener("click",v);r?.addEventListener("input",y);i?.addEventListener("click",e=>{e.target===i&&u()});c?.addEventListener("click",e=>{const t=e.target.closest(".pal-item");t&&t.dataset.jump&&(e.preventDefault(),b(t))});window.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k")e.preventDefault(),i&&i.hidden?v():u();else if(e.key==="Escape")u();else if(!i?.hidden){const t=[...c?.querySelectorAll(".pal-item")||[]];if(!t.length)return;e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,m(d)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,m(d)):e.key==="Enter"&&(e.preventDefault(),b(t[s]))}});</script>

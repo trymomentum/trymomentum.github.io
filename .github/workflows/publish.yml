@@ -1,0 +1,27 @@
+name: Publish Pages
+# Publishes this repo's committed static site to GitHub Pages (build_type:
+# workflow). Shipped INTO dist by LiminaLabsAI/momentum's deploy-site.yml
+# so the cross-repo force-push (which replaces this repo's main) always
+# re-lands the publisher; the push then triggers this workflow.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - uses: actions/deploy-pages@v4

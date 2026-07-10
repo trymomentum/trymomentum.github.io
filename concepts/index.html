@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="/brand/png/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/brand/png/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/brand/png/momentum-app-180.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0023ae"><link rel="canonical" href="https://trymomentum.github.io/concepts/"><title>Concepts — momentum docs</title><meta name="description" content="The five primitives that make up a momentum project — phases, backlog, history, ADRs, and ecosystem mode. The shape of the toolkit in one page."><meta property="og:type" content="website"><meta property="og:title" content="Concepts — momentum docs"><meta property="og:description" content="The five primitives that make up a momentum project — phases, backlog, history, ADRs, and ecosystem mode. The shape of the toolkit in one page."><meta property="og:url" content="https://trymomentum.github.io/concepts/"><meta property="og:image" content="https://trymomentum.github.io/og/default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Concepts — momentum docs"><meta name="twitter:description" content="The five primitives that make up a momentum project — phases, backlog, history, ADRs, and ecosystem mode. The shape of the toolkit in one page."><meta name="twitter:image" content="https://trymomentum.github.io/og/default.png"><script>(function(){try{var t=localStorage.getItem('mm-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:'light';}catch(e){document.documentElement.dataset.theme='light';}})();</script><script>(function(){try{if(sessionStorage.getItem('mm-swept')){document.documentElement.classList.add('mm-swept');}else{sessionStorage.setItem('mm-swept','1');}}catch(e){}})();</script><link rel="stylesheet" href="/_astro/Icon.CfDLM5Ju.css">
+<link rel="stylesheet" href="/_astro/_..D1_BWr6T.css"></head> <body> <div class="ambient-layer" aria-hidden="true"></div> <div class="page mm-docs">  <header class="tb"> <nav class="tb-pillbar"> <a class="mm-brand tb-brand" href="/" aria-label="momentum"> <svg class="mm-mark" viewBox="0 0 48 48" width="24" height="24" fill="none" aria-hidden="true"> <path class="c c1" d="M11 15 20 24 11 33"></path> <path class="c c2" d="M20 15 29 24 20 33"></path> <path class="c c3" d="M29 15 38 24 29 33"></path> </svg> <span class="mm-word">momentum</span>  <span class="tb-pill">docs</span>  </a>  <script type="module">const t=document.documentElement;t.classList.contains("mm-swept")||window.setTimeout(()=>t.classList.add("mm-swept"),850);const s=window.matchMedia("(prefers-reduced-motion: reduce)");for(const e of document.querySelectorAll(".mm-brand"))e.addEventListener("mouseenter",()=>{s.matches||(e.classList.remove("mm-sweep"),e.getBoundingClientRect(),e.classList.add("mm-sweep"))});</script> <button type="button" class="tb-search" data-open-palette aria-label="Search docs"> <svg width="1em" height="1em" class="ic" data-icon="lucide:search">   <symbol id="ai:lucide:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:lucide:search"></use>  </svg> <span>Search docs</span> <kbd>⌘K</kbd> </button> <div class="tb-right"> <button type="button" class="tb-icon tb-menu" data-toggle-sidebar aria-label="Toggle navigation"> <svg width="1em" height="1em" class="ic" data-icon="lucide:menu">   <symbol id="ai:lucide:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></symbol><use href="#ai:lucide:menu"></use>  </svg> </button> <button type="button" class="tb-icon" data-toggle-theme aria-label="Toggle theme"> <svg width="1em" height="1em" class="ic" data-icon="lucide:sun-moon">   <symbol id="ai:lucide:sun-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m2.837 12.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4m7-3l-1.256 1.256M20 12h2"/></symbol><use href="#ai:lucide:sun-moon"></use>  </svg> </button> <a class="tb-icon" href="https://github.com/LiminaLabsAI/momentum" target="_blank" rel="noopener" aria-label="GitHub"> <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg> </a> </div> </nav> </header> <div class="docs-grid" id="top"> <!-- SIDEBAR --> <aside class="sidebar" data-sidebar> <nav> <div class="side-group"> <p class="side-label">Start here</p> <a class="side-link" href="/getting-started/"> Getting started </a><a class="side-link active" href="/concepts/" aria-current="page"> Concepts </a><a class="side-link" href="/parallel-work/"> Parallel work </a> </div><div class="side-group"> <p class="side-label">Reference</p> <a class="side-link" href="/skills/"> Skills </a><a class="side-link" href="/rules/"> Rules </a><a class="side-link" href="/ide-support/"> IDE support </a> </div><div class="side-group"> <p class="side-label">Orchestration</p> <a class="side-link" href="/ecosystem/"> Ecosystem </a><a class="side-link" href="/orchestration/"> Cross-project actions </a><a class="side-link" href="/team/"> Team mode </a><a class="side-link" href="/swarm/"> Swarm </a> </div><div class="side-group"> <p class="side-label">More</p> <a class="side-link" href="/faq/"> FAQ </a><a class="side-link" href="/about/"> About </a> </div> </nav> </aside> <div class="sidebar-scrim" data-sidebar-scrim aria-hidden="true"></div> <!-- ARTICLE --> <main class="article"> <div class="doc-wrap"> <div class="doc-crumb"> Start here<span class="sep">›</span><span class="cur">Concepts</span> </div> <div class="doc-head"> <h1>Concepts</h1> </div> <p class="doc-lead">The five primitives that make up a momentum project — phases, backlog, history, ADRs, and ecosystem mode. The shape of the toolkit in one page.</p> <article class="doc"> <p>momentum is a small set of primitives organized into a workflow. Once you
+understand the five concepts on this page, the rest of the toolkit is just
+glue.</p>
+<p>The primitives are deliberately separate:</p>
+<ul>
+<li><strong>Phases</strong> are the unit of work — bounded, planned, shipped.</li>
+<li><strong>Backlog</strong> is the durable home for everything that doesn’t fit the
+current phase.</li>
+<li><strong>History</strong> is the append-only record of <em>why</em> decisions were made.</li>
+<li><strong>ADRs</strong> are the deeper context for structural decisions.</li>
+<li><strong>Ecosystem mode</strong> is the optional layer for cross-project coordination.</li>
+</ul>
+<p>Each is a file (or a small set of files) on disk. The agent reads and writes
+them as part of the standard workflow. Humans read them too — that’s the
+point.</p>
+<h2 id="phases">Phases</h2>
+<p>A <strong>phase</strong> is a unit of work — a focused sprint to ship one coherent piece
+of value. Every phase has four files in its own directory:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>specs/phases/phase-N-shortname/</span></span>
+<span class="line"><span>├── overview.md      # goal, scope, deliverables, acceptance criteria</span></span>
+<span class="line"><span>├── plan.md          # implementation approach (Group Execution Pattern)</span></span>
+<span class="line"><span>├── tasks.md         # granular checklist [ ] / [x] / [/]</span></span>
+<span class="line"><span>└── history.md       # append-only log of decisions and discoveries</span></span></code></pre>
+<p>A phase lifecycle is: <code>/brainstorm-phase</code> → <code>/start-phase</code> → ship → <code>/sync-docs</code> → <code>/complete-phase</code>.</p>
+<svg id="mermaid-0" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="statediagram" style="max-width: 153.6875px;" viewBox="0 0 153.6875 560.5" role="graphics-document document" aria-roledescription="stateDiagram"><style>#mermaid-0{font-family:'Geist Variable',Geist,system-ui,sans-serif;font-size:15px;fill:#0d1330;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-0 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-0 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-0 .error-icon{fill:#f3f5fb;}#mermaid-0 .error-text{fill:#0c0a04;stroke:#0c0a04;}#mermaid-0 .edge-thickness-normal{stroke-width:1px;}#mermaid-0 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-0 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-0 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-0 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-0 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-0 .marker{fill:#4a4f5e;stroke:#4a4f5e;}#mermaid-0 .marker.cross{stroke:#4a4f5e;}#mermaid-0 svg{font-family:'Geist Variable',Geist,system-ui,sans-serif;font-size:15px;}#mermaid-0 p{margin:0;}#mermaid-0 defs [id$="-barbEnd"]{fill:#4a4f5e;stroke:#4a4f5e;}#mermaid-0 g.stateGroup text{fill:#2f5be0;stroke:none;font-size:10px;}#mermaid-0 g.stateGroup text{fill:#0d1330;stroke:none;font-size:10px;}#mermaid-0 g.stateGroup .state-title{font-weight:bolder;fill:#0d1330;}#mermaid-0 g.stateGroup rect{fill:#dde5ff;stroke:#2f5be0;}#mermaid-0 g.stateGroup line{stroke:#4a4f5e;stroke-width:1;}#mermaid-0 .transition{stroke:#4a4f5e;stroke-width:1;fill:none;}#mermaid-0 .stateGroup .composit{fill:#f4f4f4;border-bottom:1px;}#mermaid-0 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px;}#mermaid-0 .state-note{stroke:#fcd34d;fill:#fef3c7;}#mermaid-0 .state-note text{fill:#15161c;stroke:none;font-size:10px;}#mermaid-0 .stateLabel .box{stroke:none;stroke-width:0;fill:#dde5ff;opacity:0.5;}#mermaid-0 .edgeLabel .label rect{fill:#dde5ff;opacity:0.5;}#mermaid-0 .edgeLabel{background-color:#eceef6;text-align:center;}#mermaid-0 .edgeLabel p{background-color:#eceef6;}#mermaid-0 .edgeLabel rect{opacity:0.5;background-color:#eceef6;fill:#eceef6;}#mermaid-0 .edgeLabel .label text{fill:#0d1330;}#mermaid-0 .label div .edgeLabel{color:#0d1330;}#mermaid-0 .stateLabel text{fill:#0d1330;font-size:10px;font-weight:bold;}#mermaid-0 .node circle.state-start{fill:#4a4f5e;stroke:#4a4f5e;}#mermaid-0 .node .fork-join{fill:#4a4f5e;stroke:#4a4f5e;}#mermaid-0 .node circle.state-end{fill:#2f5be0;stroke:#f4f4f4;stroke-width:1.5;}#mermaid-0 .end-state-inner{fill:#f4f4f4;stroke-width:1.5;}#mermaid-0 .node rect{fill:#dde5ff;stroke:#2f5be0;stroke-width:1px;}#mermaid-0 .node polygon{fill:#dde5ff;stroke:#2f5be0;stroke-width:1px;}#mermaid-0 [id$="-barbEnd"]{fill:#4a4f5e;}#mermaid-0 .statediagram-cluster rect{fill:#dde5ff;stroke:#2f5be0;stroke-width:1px;}#mermaid-0 .cluster-label,#mermaid-0 .nodeLabel{color:#0d1330;}#mermaid-0 .statediagram-cluster rect.outer{rx:5px;ry:5px;}#mermaid-0 .statediagram-state .divider{stroke:#2f5be0;}#mermaid-0 .statediagram-state .title-state{rx:5px;ry:5px;}#mermaid-0 .statediagram-cluster.statediagram-cluster .inner{fill:#f4f4f4;}#mermaid-0 .statediagram-cluster.statediagram-cluster-alt .inner{fill:#f3f5fb;}#mermaid-0 .statediagram-cluster .inner{rx:0;ry:0;}#mermaid-0 .statediagram-state rect.basic{rx:5px;ry:5px;}#mermaid-0 .statediagram-state rect.divider{stroke-dasharray:10,10;fill:#f3f5fb;}#mermaid-0 .note-edge{stroke-dasharray:5;}#mermaid-0 .statediagram-note rect{fill:#fef3c7;stroke:#fcd34d;stroke-width:1px;rx:0;ry:0;}#mermaid-0 .statediagram-note rect{fill:#fef3c7;stroke:#fcd34d;stroke-width:1px;rx:0;ry:0;}#mermaid-0 .statediagram-note text{fill:#15161c;}#mermaid-0 .statediagram-note .nodeLabel{color:#15161c;}#mermaid-0 .statediagram .edgeLabel{color:red;}#mermaid-0 [id$="-dependencyStart"],#mermaid-0 [id$="-dependencyEnd"]{fill:#4a4f5e;stroke:#4a4f5e;stroke-width:1;}#mermaid-0 .statediagramTitleText{text-anchor:middle;font-size:18px;fill:#0d1330;}#mermaid-0 [data-look="neo"].statediagram-cluster rect{fill:#dde5ff;stroke:url(#mermaid-0-gradient);stroke-width:1;}#mermaid-0 [data-look="neo"].statediagram-cluster rect.outer{rx:5px;ry:5px;filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 .node .neo-node{stroke:#2f5be0;}#mermaid-0 [data-look="neo"].node rect,#mermaid-0 [data-look="neo"].cluster rect,#mermaid-0 [data-look="neo"].node polygon{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node path{stroke:url(#mermaid-0-gradient);stroke-width:1px;}#mermaid-0 [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node .neo-line path{stroke:#2f5be0;filter:none;}#mermaid-0 [data-look="neo"].node circle{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node circle .state-start{fill:#000000;}#mermaid-0 [data-look="neo"].icon-shape .icon{fill:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].icon-shape .icon-neo path{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 :root{--mermaid-font-family:arial,sans-serif;}</style><g><defs><marker id="mermaid-0_stateDiagram-barbEnd" refX="19" refY="7" markerWidth="20" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M 19,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M76.844,22L76.844,28.042C76.844,34.083,76.844,46.167,76.844,58.25C76.844,70.333,76.844,82.417,76.844,88.458L76.844,94.5" id="mermaid-0-edge0" class="edge-thickness-normal edge-pattern-solid transition" style="fill:none;;;fill:none" data-edge="true" data-et="edge" data-id="edge0" data-points="W3sieCI6NzYuODQzNzUsInkiOjIyfSx7IngiOjc2Ljg0Mzc1LCJ5Ijo1OC4yNX0seyJ4Ijo3Ni44NDM3NSwieSI6OTQuNX1d" data-look="classic" marker-end="url(#mermaid-0_stateDiagram-barbEnd)"></path><path d="M76.844,133L76.844,139.042C76.844,145.083,76.844,157.167,76.844,169.25C76.844,181.333,76.844,193.417,76.844,199.458L76.844,205.5" id="mermaid-0-edge1" class="edge-thickness-normal edge-pattern-solid transition" style="fill:none;;;fill:none" data-edge="true" data-et="edge" data-id="edge1" data-points="W3sieCI6NzYuODQzNzUsInkiOjEzM30seyJ4Ijo3Ni44NDM3NSwieSI6MTY5LjI1fSx7IngiOjc2Ljg0Mzc1LCJ5IjoyMDUuNX1d" data-look="classic" marker-end="url(#mermaid-0_stateDiagram-barbEnd)"></path><path d="M76.844,244L76.844,250.042C76.844,256.083,76.844,268.167,76.844,280.25C76.844,292.333,76.844,304.417,76.844,310.458L76.844,316.5" id="mermaid-0-edge2" class="edge-thickness-normal edge-pattern-solid transition" style="fill:none;;;fill:none" data-edge="true" data-et="edge" data-id="edge2" data-points="W3sieCI6NzYuODQzNzUsInkiOjI0NH0seyJ4Ijo3Ni44NDM3NSwieSI6MjgwLjI1fSx7IngiOjc2Ljg0Mzc1LCJ5IjozMTYuNX1d" data-look="classic" marker-end="url(#mermaid-0_stateDiagram-barbEnd)"></path><path d="M76.844,355L76.844,361.042C76.844,367.083,76.844,379.167,76.844,391.25C76.844,403.333,76.844,415.417,76.844,421.458L76.844,427.5" id="mermaid-0-edge3" class="edge-thickness-normal edge-pattern-solid transition" style="fill:none;;;fill:none" data-edge="true" data-et="edge" data-id="edge3" data-points="W3sieCI6NzYuODQzNzUsInkiOjM1NX0seyJ4Ijo3Ni44NDM3NSwieSI6MzkxLjI1fSx7IngiOjc2Ljg0Mzc1LCJ5Ijo0MjcuNX1d" data-look="classic" marker-end="url(#mermaid-0_stateDiagram-barbEnd)"></path><path d="M76.844,466L76.844,472.042C76.844,478.083,76.844,490.167,76.844,502.249C76.844,514.331,76.844,526.412,76.844,532.453L76.844,538.493" id="mermaid-0-edge4" class="edge-thickness-normal edge-pattern-solid transition" style="fill:none;;;fill:none" data-edge="true" data-et="edge" data-id="edge4" data-points="W3sieCI6NzYuODQzNzUsInkiOjQ2Nn0seyJ4Ijo3Ni44NDM3NSwieSI6NTAyLjI1fSx7IngiOjc2Ljg0Mzc1LCJ5Ijo1MzguNDkzMzUzMzY2ODUxOH1d" data-look="classic" marker-end="url(#mermaid-0_stateDiagram-barbEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(76.84375, 58.25)"><g class="label" data-id="edge0" transform="translate(-68.84375, -11.25)"><foreignObject width="137.6875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>/brainstorm-phase</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(76.84375, 169.25)"><g class="label" data-id="edge1" transform="translate(-45.3359375, -11.25)"><foreignObject width="90.671875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>/start-phase</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(76.84375, 280.25)"><g class="label" data-id="edge2" transform="translate(-63.109375, -11.25)"><foreignObject width="126.21875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>groups complete</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(76.84375, 391.25)"><g class="label" data-id="edge3" transform="translate(-62.8984375, -11.25)"><foreignObject width="125.796875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>/complete-phase</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(76.84375, 502.25)"><g class="label" data-id="edge4" transform="translate(-50.453125, -11.25)"><foreignObject width="100.90625" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>tag + publish</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="mermaid-0-state-root_start-0" data-look="classic" transform="translate(76.84375, 15)"><circle class="state-start" r="7" width="14" height="14"></circle></g><g class="node statediagram-state" id="mermaid-0-state-Planned-1" data-look="classic" transform="translate(76.84375, 113.75)"><rect class="basic label-container" style="" rx="5" ry="5" x="-38.0859375" y="-19.25" width="76.171875" height="38.5"></rect><g class="label" style="" transform="translate(-30.0859375, -11.25)"><rect></rect><foreignObject width="60.171875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel markdown-node-label"><p>Planned</p></span></div></foreignObject></g></g><g class="node statediagram-state" id="mermaid-0-state-InProgress-2" data-look="classic" transform="translate(76.84375, 224.75)"><rect class="basic label-container" style="" rx="5" ry="5" x="-46.9765625" y="-19.25" width="93.953125" height="38.5"></rect><g class="label" style="" transform="translate(-38.9765625, -11.25)"><rect></rect><foreignObject width="77.953125" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel markdown-node-label"><p>InProgress</p></span></div></foreignObject></g></g><g class="node statediagram-state" id="mermaid-0-state-Verified-3" data-look="classic" transform="translate(76.84375, 335.75)"><rect class="basic label-container" style="" rx="5" ry="5" x="-36.4296875" y="-19.25" width="72.859375" height="38.5"></rect><g class="label" style="" transform="translate(-28.4296875, -11.25)"><rect></rect><foreignObject width="56.859375" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel markdown-node-label"><p>Verified</p></span></div></foreignObject></g></g><g class="node statediagram-state" id="mermaid-0-state-Released-4" data-look="classic" transform="translate(76.84375, 446.75)"><rect class="basic label-container" style="" rx="5" ry="5" x="-42.0703125" y="-19.25" width="84.140625" height="38.5"></rect><g class="label" style="" transform="translate(-34.0703125, -11.25)"><rect></rect><foreignObject width="68.140625" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel markdown-node-label"><p>Released</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-state-root_end-4" data-look="classic" transform="translate(76.84375, 545.5)"><g class="outer-path"><path d="M7 0 C7 0.40517908122283747, 6.964012880168563 0.816513743121899, 6.893654271085456 1.2155372436685123 C6.823295662002349 1.6145607442151257, 6.716427752933756 2.013397210557766, 6.5778483455013586 2.394141003279681 C6.439268938068961 2.7748847960015954, 6.26476736710249 3.149104622578984, 6.062177826491071 3.4999999999999996 C5.859588285879653 3.8508953774210153, 5.622755194947063 4.189128084166967, 5.362311101832846 4.499513267805774 C5.10186700871863 4.809898451444582, 4.809898451444583 5.10186700871863, 4.499513267805775 5.362311101832846 C4.189128084166968 5.622755194947063, 3.8508953774210166 5.859588285879652, 3.500000000000001 6.06217782649107 C3.149104622578985 6.264767367102489, 2.7748847960015963 6.439268938068961, 2.3941410032796817 6.5778483455013586 C2.013397210557767 6.716427752933756, 1.6145607442151264 6.823295662002349, 1.2155372436685128 6.893654271085456 C0.8165137431218992 6.964012880168563, 0.4051790812228379 7, 4.286263797015736e-16 7 C-0.405179081222837 7, -0.8165137431218985 6.964012880168563, -1.2155372436685121 6.893654271085456 C-1.6145607442151257 6.823295662002349, -2.0133972105577667 6.716427752933756, -2.394141003279681 6.5778483455013586 C-2.774884796001595 6.439268938068961, -3.149104622578983 6.26476736710249, -3.4999999999999982 6.062177826491071 C-3.8508953774210135 5.859588285879653, -4.189128084166966 5.6227551949470636, -4.499513267805773 5.362311101832848 C-4.809898451444581 5.101867008718632, -5.101867008718628 4.809898451444586, -5.3623111018328435 4.499513267805779 C-5.622755194947059 4.189128084166971, -5.859588285879649 3.8508953774210206, -6.062177826491068 3.5000000000000053 C-6.264767367102486 3.14910462257899, -6.439268938068958 2.774884796001602, -6.577848345501356 2.394141003279688 C-6.716427752933754 2.0133972105577738, -6.823295662002347 1.614560744215134, -6.893654271085454 1.215537243668521 C-6.9640128801685615 0.816513743121908, -6.999999999999999 0.4051790812228472, -7 1.0183126166254463e-14 C-7.000000000000001 -0.40517908122282686, -6.964012880168565 -0.8165137431218878, -6.893654271085459 -1.215537243668501 C-6.823295662002352 -1.6145607442151142, -6.716427752933759 -2.0133972105577542, -6.577848345501363 -2.394141003279669 C-6.439268938068967 -2.7748847960015834, -6.264767367102496 -3.149104622578972, -6.062177826491078 -3.4999999999999876 C-5.859588285879661 -3.8508953774210033, -5.6227551949470715 -4.1891280841669545, -5.362311101832856 -4.499513267805763 C-5.10186700871864 -4.809898451444571, -4.809898451444594 -5.10186700871862, -4.499513267805787 -5.362311101832836 C-4.189128084166979 -5.622755194947053, -3.850895377421028 -5.859588285879643, -3.5000000000000133 -6.062177826491062 C-3.1491046225789985 -6.264767367102482, -2.774884796001611 -6.439268938068954, -2.3941410032796973 -6.577848345501353 C-2.0133972105577835 -6.716427752933752, -1.6145607442151435 -6.823295662002345, -1.2155372436685306 -6.893654271085453 C-0.8165137431219176 -6.9640128801685615, -0.40517908122285695 -6.999999999999999, -1.9937625952807352e-14 -7 C0.4051790812228171 -7.000000000000001, 0.8165137431218781 -6.964012880168565, 1.2155372436684913 -6.89365427108546 C1.6145607442151044 -6.823295662002354, 2.013397210557745 -6.716427752933763, 2.3941410032796595 -6.5778483455013665 C2.774884796001574 -6.43926893806897, 3.149104622578963 -6.2647673671025, 3.499999999999979 -6.062177826491083 C3.8508953774209953 -5.859588285879665, 4.189128084166947 -5.622755194947077, 4.499513267805756 -5.362311101832862 C4.809898451444564 -5.1018670087186475, 5.101867008718613 -4.809898451444602, 5.362311101832829 -4.499513267805796 C5.622755194947046 -4.189128084166989, 5.859588285879637 -3.8508953774210393, 6.062177826491056 -3.500000000000025 C6.2647673671024755 -3.1491046225790105, 6.439268938068949 -2.774884796001623, 6.577848345501348 -2.3941410032797092 C6.716427752933747 -2.0133972105577955, 6.823295662002342 -1.6145607442151562, 6.893654271085451 -1.2155372436685434 C6.96401288016856 -0.8165137431219307, 6.982275711847575 -0.2025895406114567, 7 -3.2800750208310675e-14 C7.017724288152425 0.2025895406113911, 7.017724288152424 -0.2025895406114242, 7 0" stroke="none" stroke-width="0" fill="#dde5ff" style=""></path><path d="M7 0 C7 0.40517908122283747, 6.964012880168563 0.816513743121899, 6.893654271085456 1.2155372436685123 C6.823295662002349 1.6145607442151257, 6.716427752933756 2.013397210557766, 6.5778483455013586 2.394141003279681 C6.439268938068961 2.7748847960015954, 6.26476736710249 3.149104622578984, 6.062177826491071 3.4999999999999996 C5.859588285879653 3.8508953774210153, 5.622755194947063 4.189128084166967, 5.362311101832846 4.499513267805774 C5.10186700871863 4.809898451444582, 4.809898451444583 5.10186700871863, 4.499513267805775 5.362311101832846 C4.189128084166968 5.622755194947063, 3.8508953774210166 5.859588285879652, 3.500000000000001 6.06217782649107 C3.149104622578985 6.264767367102489, 2.7748847960015963 6.439268938068961, 2.3941410032796817 6.5778483455013586 C2.013397210557767 6.716427752933756, 1.6145607442151264 6.823295662002349, 1.2155372436685128 6.893654271085456 C0.8165137431218992 6.964012880168563, 0.4051790812228379 7, 4.286263797015736e-16 7 C-0.405179081222837 7, -0.8165137431218985 6.964012880168563, -1.2155372436685121 6.893654271085456 C-1.6145607442151257 6.823295662002349, -2.0133972105577667 6.716427752933756, -2.394141003279681 6.5778483455013586 C-2.774884796001595 6.439268938068961, -3.149104622578983 6.26476736710249, -3.4999999999999982 6.062177826491071 C-3.8508953774210135 5.859588285879653, -4.189128084166966 5.6227551949470636, -4.499513267805773 5.362311101832848 C-4.809898451444581 5.101867008718632, -5.101867008718628 4.809898451444586, -5.3623111018328435 4.499513267805779 C-5.622755194947059 4.189128084166971, -5.859588285879649 3.8508953774210206, -6.062177826491068 3.5000000000000053 C-6.264767367102486 3.14910462257899, -6.439268938068958 2.774884796001602, -6.577848345501356 2.394141003279688 C-6.716427752933754 2.0133972105577738, -6.823295662002347 1.614560744215134, -6.893654271085454 1.215537243668521 C-6.9640128801685615 0.816513743121908, -6.999999999999999 0.4051790812228472, -7 1.0183126166254463e-14 C-7.000000000000001 -0.40517908122282686, -6.964012880168565 -0.8165137431218878, -6.893654271085459 -1.215537243668501 C-6.823295662002352 -1.6145607442151142, -6.716427752933759 -2.0133972105577542, -6.577848345501363 -2.394141003279669 C-6.439268938068967 -2.7748847960015834, -6.264767367102496 -3.149104622578972, -6.062177826491078 -3.4999999999999876 C-5.859588285879661 -3.8508953774210033, -5.6227551949470715 -4.1891280841669545, -5.362311101832856 -4.499513267805763 C-5.10186700871864 -4.809898451444571, -4.809898451444594 -5.10186700871862, -4.499513267805787 -5.362311101832836 C-4.189128084166979 -5.622755194947053, -3.850895377421028 -5.859588285879643, -3.5000000000000133 -6.062177826491062 C-3.1491046225789985 -6.264767367102482, -2.774884796001611 -6.439268938068954, -2.3941410032796973 -6.577848345501353 C-2.0133972105577835 -6.716427752933752, -1.6145607442151435 -6.823295662002345, -1.2155372436685306 -6.893654271085453 C-0.8165137431219176 -6.9640128801685615, -0.40517908122285695 -6.999999999999999, -1.9937625952807352e-14 -7 C0.4051790812228171 -7.000000000000001, 0.8165137431218781 -6.964012880168565, 1.2155372436684913 -6.89365427108546 C1.6145607442151044 -6.823295662002354, 2.013397210557745 -6.716427752933763, 2.3941410032796595 -6.5778483455013665 C2.774884796001574 -6.43926893806897, 3.149104622578963 -6.2647673671025, 3.499999999999979 -6.062177826491083 C3.8508953774209953 -5.859588285879665, 4.189128084166947 -5.622755194947077, 4.499513267805756 -5.362311101832862 C4.809898451444564 -5.1018670087186475, 5.101867008718613 -4.809898451444602, 5.362311101832829 -4.499513267805796 C5.622755194947046 -4.189128084166989, 5.859588285879637 -3.8508953774210393, 6.062177826491056 -3.500000000000025 C6.2647673671024755 -3.1491046225790105, 6.439268938068949 -2.774884796001623, 6.577848345501348 -2.3941410032797092 C6.716427752933747 -2.0133972105577955, 6.823295662002342 -1.6145607442151562, 6.893654271085451 -1.2155372436685434 C6.96401288016856 -0.8165137431219307, 6.982275711847575 -0.2025895406114567, 7 -3.2800750208310675e-14 C7.017724288152425 0.2025895406113911, 7.017724288152424 -0.2025895406114242, 7 0" stroke="#4a4f5e" stroke-width="2" fill="none" stroke-dasharray="0 0" style=""></path><g><path d="M2.5 0 C2.5 0.14470681472244193, 2.487147457203058 0.29161205111496386, 2.46201938253052 0.4341204441673258 C2.436891307857982 0.5766288372196877, 2.3987241974763416 0.7190704323420595, 2.3492315519647713 0.8550503583141718 C2.299738906453201 0.991030284286284, 2.2374169168223177 1.124680222349637, 2.165063509461097 1.2499999999999998 C2.092710102099876 1.3753197776503625, 2.0081268553382365 1.496117172916774, 1.915111107797445 1.6069690242163481 C1.8220953602566536 1.7178208755159223, 1.7178208755159226 1.8220953602566536, 1.6069690242163484 1.915111107797445 C1.4961171729167742 2.0081268553382365, 1.375319777650363 2.0927101020998755, 1.2500000000000002 2.1650635094610964 C1.1246802223496375 2.2374169168223172, 0.9910302842862845 2.2997389064532, 0.8550503583141721 2.349231551964771 C0.7190704323420597 2.3987241974763416, 0.576628837219688 2.436891307857982, 0.43412044416732604 2.46201938253052 C0.291612051114964 2.487147457203058, 0.14470681472244212 2.5, 1.5308084989341916e-16 2.5 C-0.1447068147224418 2.5, -0.2916120511149638 2.487147457203058, -0.43412044416732576 2.46201938253052 C-0.5766288372196877 2.436891307857982, -0.7190704323420595 2.3987241974763416, -0.8550503583141718 2.3492315519647713 C-0.991030284286284 2.299738906453201, -1.124680222349637 2.2374169168223177, -1.2499999999999996 2.165063509461097 C-1.375319777650362 2.092710102099876, -1.4961171729167733 2.008126855338237, -1.6069690242163475 1.9151111077974459 C-1.7178208755159217 1.8220953602566548, -1.822095360256653 1.7178208755159234, -1.9151111077974443 1.6069690242163495 C-2.0081268553382357 1.4961171729167755, -2.0927101020998746 1.3753197776503645, -2.1650635094610955 1.250000000000002 C-2.2374169168223164 1.1246802223496395, -2.2997389064531992 0.9910302842862865, -2.34923155196477 0.8550503583141743 C-2.3987241974763407 0.7190704323420621, -2.436891307857981 0.5766288372196907, -2.4620193825305194 0.434120444167329 C-2.487147457203058 0.29161205111496724, -2.5 0.14470681472244545, -2.5 3.636830773662308e-15 C-2.5 -0.14470681472243818, -2.4871474572030587 -0.2916120511149599, -2.4620193825305208 -0.4341204441673218 C-2.436891307857983 -0.5766288372196837, -2.398724197476343 -0.7190704323420553, -2.3492315519647726 -0.8550503583141675 C-2.2997389064532023 -0.9910302842862798, -2.23741691682232 -1.1246802223496328, -2.165063509461099 -1.2499999999999956 C-2.092710102099878 -1.3753197776503583, -2.00812685533824 -1.4961171729167695, -1.9151111077974488 -1.606969024216344 C-1.8220953602566576 -1.7178208755159183, -1.7178208755159263 -1.82209536025665, -1.6069690242163523 -1.9151111077974416 C-1.4961171729167784 -2.0081268553382334, -1.3753197776503672 -2.0927101020998724, -1.2500000000000047 -2.1650635094610937 C-1.1246802223496422 -2.237416916822315, -0.9910302842862897 -2.299738906453198, -0.8550503583141776 -2.3492315519647686 C-0.7190704323420656 -2.3987241974763394, -0.5766288372196942 -2.4368913078579806, -0.43412044416733236 -2.462019382530519 C-0.29161205111497057 -2.4871474572030574, -0.1447068147224489 -2.4999999999999996, -7.120580697431198e-15 -2.5 C0.14470681472243463 -2.5000000000000004, 0.29161205111495647 -2.487147457203059, 0.4341204441673183 -2.4620193825305217 C0.5766288372196802 -2.436891307857984, 0.7190704323420518 -2.3987241974763442, 0.8550503583141642 -2.349231551964774 C0.9910302842862766 -2.2997389064532037, 1.1246802223496295 -2.2374169168223212, 1.2499999999999925 -2.165063509461101 C1.3753197776503554 -2.0927101020998804, 1.4961171729167668 -2.008126855338242, 1.6069690242163412 -1.915111107797451 C1.7178208755159157 -1.82209536025666, 1.8220953602566472 -1.7178208755159294, 1.915111107797439 -1.6069690242163557 C2.0081268553382308 -1.496117172916782, 2.09271010209987 -1.3753197776503712, 2.1650635094610915 -1.2500000000000089 C2.237416916822313 -1.1246802223496466, 2.299738906453196 -0.9910302842862939, 2.3492315519647673 -0.855050358314182 C2.3987241974763385 -0.71907043234207, 2.4368913078579792 -0.5766288372196986, 2.462019382530518 -0.4341204441673369 C2.487147457203057 -0.29161205111497523, 2.4936698970884197 -0.07235340736123454, 2.5 -1.1714553645825241e-14 C2.5063301029115803 0.07235340736121111, 2.50633010291158 -0.07235340736122292, 2.5 0" stroke="none" stroke-width="0" fill="#2f5be0" style=""></path><path d="M2.5 0 C2.5 0.14470681472244193, 2.487147457203058 0.29161205111496386, 2.46201938253052 0.4341204441673258 C2.436891307857982 0.5766288372196877, 2.3987241974763416 0.7190704323420595, 2.3492315519647713 0.8550503583141718 C2.299738906453201 0.991030284286284, 2.2374169168223177 1.124680222349637, 2.165063509461097 1.2499999999999998 C2.092710102099876 1.3753197776503625, 2.0081268553382365 1.496117172916774, 1.915111107797445 1.6069690242163481 C1.8220953602566536 1.7178208755159223, 1.7178208755159226 1.8220953602566536, 1.6069690242163484 1.915111107797445 C1.4961171729167742 2.0081268553382365, 1.375319777650363 2.0927101020998755, 1.2500000000000002 2.1650635094610964 C1.1246802223496375 2.2374169168223172, 0.9910302842862845 2.2997389064532, 0.8550503583141721 2.349231551964771 C0.7190704323420597 2.3987241974763416, 0.576628837219688 2.436891307857982, 0.43412044416732604 2.46201938253052 C0.291612051114964 2.487147457203058, 0.14470681472244212 2.5, 1.5308084989341916e-16 2.5 C-0.1447068147224418 2.5, -0.2916120511149638 2.487147457203058, -0.43412044416732576 2.46201938253052 C-0.5766288372196877 2.436891307857982, -0.7190704323420595 2.3987241974763416, -0.8550503583141718 2.3492315519647713 C-0.991030284286284 2.299738906453201, -1.124680222349637 2.2374169168223177, -1.2499999999999996 2.165063509461097 C-1.375319777650362 2.092710102099876, -1.4961171729167733 2.008126855338237, -1.6069690242163475 1.9151111077974459 C-1.7178208755159217 1.8220953602566548, -1.822095360256653 1.7178208755159234, -1.9151111077974443 1.6069690242163495 C-2.0081268553382357 1.4961171729167755, -2.0927101020998746 1.3753197776503645, -2.1650635094610955 1.250000000000002 C-2.2374169168223164 1.1246802223496395, -2.2997389064531992 0.9910302842862865, -2.34923155196477 0.8550503583141743 C-2.3987241974763407 0.7190704323420621, -2.436891307857981 0.5766288372196907, -2.4620193825305194 0.434120444167329 C-2.487147457203058 0.29161205111496724, -2.5 0.14470681472244545, -2.5 3.636830773662308e-15 C-2.5 -0.14470681472243818, -2.4871474572030587 -0.2916120511149599, -2.4620193825305208 -0.4341204441673218 C-2.436891307857983 -0.5766288372196837, -2.398724197476343 -0.7190704323420553, -2.3492315519647726 -0.8550503583141675 C-2.2997389064532023 -0.9910302842862798, -2.23741691682232 -1.1246802223496328, -2.165063509461099 -1.2499999999999956 C-2.092710102099878 -1.3753197776503583, -2.00812685533824 -1.4961171729167695, -1.9151111077974488 -1.606969024216344 C-1.8220953602566576 -1.7178208755159183, -1.7178208755159263 -1.82209536025665, -1.6069690242163523 -1.9151111077974416 C-1.4961171729167784 -2.0081268553382334, -1.3753197776503672 -2.0927101020998724, -1.2500000000000047 -2.1650635094610937 C-1.1246802223496422 -2.237416916822315, -0.9910302842862897 -2.299738906453198, -0.8550503583141776 -2.3492315519647686 C-0.7190704323420656 -2.3987241974763394, -0.5766288372196942 -2.4368913078579806, -0.43412044416733236 -2.462019382530519 C-0.29161205111497057 -2.4871474572030574, -0.1447068147224489 -2.4999999999999996, -7.120580697431198e-15 -2.5 C0.14470681472243463 -2.5000000000000004, 0.29161205111495647 -2.487147457203059, 0.4341204441673183 -2.4620193825305217 C0.5766288372196802 -2.436891307857984, 0.7190704323420518 -2.3987241974763442, 0.8550503583141642 -2.349231551964774 C0.9910302842862766 -2.2997389064532037, 1.1246802223496295 -2.2374169168223212, 1.2499999999999925 -2.165063509461101 C1.3753197776503554 -2.0927101020998804, 1.4961171729167668 -2.008126855338242, 1.6069690242163412 -1.915111107797451 C1.7178208755159157 -1.82209536025666, 1.8220953602566472 -1.7178208755159294, 1.915111107797439 -1.6069690242163557 C2.0081268553382308 -1.496117172916782, 2.09271010209987 -1.3753197776503712, 2.1650635094610915 -1.2500000000000089 C2.237416916822313 -1.1246802223496466, 2.299738906453196 -0.9910302842862939, 2.3492315519647673 -0.855050358314182 C2.3987241974763385 -0.71907043234207, 2.4368913078579792 -0.5766288372196986, 2.462019382530518 -0.4341204441673369 C2.487147457203057 -0.29161205111497523, 2.4936698970884197 -0.07235340736123454, 2.5 -1.1714553645825241e-14 C2.5063301029115803 0.07235340736121111, 2.50633010291158 -0.07235340736122292, 2.5 0" stroke="#2f5be0" stroke-width="2" fill="none" stroke-dasharray="0 0" style=""></path></g></g></g></g></g></g><defs><filter id="mermaid-0-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><defs><filter id="mermaid-0-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><linearGradient id="mermaid-0-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2f5be0" stop-opacity="1"></stop><stop offset="100%" stop-color="#8b93b8" stop-opacity="1"></stop></linearGradient></svg>
+<h3 id="why-phases">Why phases?</h3>
+<p>Agentic AI work without phases turns into a sprawl. The agent picks up
+loose threads, drops them halfway, picks up new ones. Six weeks in, you
+can’t tell what’s shipped, what’s half-done, what got abandoned.</p>
+<p>Phases close the loop. Every piece of work has a <strong>plan</strong> before it starts,
+<strong>verification</strong> before it claims done, a <strong>history</strong> explaining the why, and
+a <strong>tag</strong> marking it released. The phase boundary is also the <strong>git
+discipline boundary</strong> — branches, PRs, version bumps all align to phase
+completion.</p>
+<h3 id="the-group-execution-pattern">The Group Execution Pattern</h3>
+<p><code>plan.md</code> declares groups of related work. A typical layout:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span># Mixed: Group 0 → (Groups 1 + 2 in parallel) → Group 3 → Group 4</span></span></code></pre>
+<ul>
+<li><strong>Group 0</strong> — contracts, types, schemas. Sequential. Blocks everything.</li>
+<li><strong>Middle groups</strong> — independent feature areas. Parallel candidates.</li>
+<li><strong>Penultimate</strong> — wiring + integration. Sequential.</li>
+<li><strong>Last</strong> — verification. Sequential.</li>
+</ul>
+<p><code>/start-phase</code> reads the execution order and runs the plan
+<strong>autonomously</strong> — committing per group, pushing after each, only stopping
+at the merge + release gate. You stay in the loop without being a
+bottleneck.</p>
+<h3 id="phase-boundaries-are-git-boundaries">Phase boundaries are git boundaries</h3>
+<ul>
+<li>Branch: <code>phase-N-shortname</code> (created by <code>/start-phase</code>)</li>
+<li>Commits: conventional style with per-group commit messages</li>
+<li>PR: phase branch → main, opened at completion</li>
+<li>Tag: <code>vX.Y.Z</code> on main once merged</li>
+<li>npm publish (for npm packages): part of <code>/complete-phase</code></li>
+</ul>
+<p>You never commit directly to main during phase work. Rule 6 enforces the
+boundary.</p>
+<h2 id="backlog">Backlog</h2>
+<p>The <strong>backlog</strong> at <code>specs/backlog/backlog.md</code> is a single markdown file with
+four sections: Bugs, Features, Tech Debt, Enhancements. Each item has an ID,
+priority, status, target phase (or “unscheduled”), and a per-item context
+block.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>| BUG-001 | install.sh blank-line bug | P3 | resolved | phase-1 | Fixed via mkdir -p before realpath. |</span></span></code></pre>
+<h3 id="priorities">Priorities</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Level</th><th>Meaning</th><th>SLA</th></tr></thead><tbody><tr><td><code>P0</code></td><td>Critical — blocks current phase</td><td>&#x3C; 1 day</td></tr><tr><td><code>P1</code></td><td>High — current or next phase</td><td>&#x3C; 1 week</td></tr><tr><td><code>P2</code></td><td>Medium — within 2 phases</td><td>&#x3C; 1 phase</td></tr><tr><td><code>P3</code></td><td>Low — nice to have</td><td>best-effort</td></tr></tbody></table>
+<p>The SLAs are calibration, not contract — they help the agent decide what to
+surface during pre-phase bug checks (Rule 4).</p>
+<h3 id="id-prefixes">ID prefixes</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Prefix</th><th>Meaning</th></tr></thead><tbody><tr><td><code>BUG-</code></td><td>Defect</td></tr><tr><td><code>FEAT-</code></td><td>New capability</td></tr><tr><td><code>TD-</code></td><td>Tech debt — refactor, cleanup</td></tr><tr><td><code>ENH-</code></td><td>Enhancement — improvement to an existing feature</td></tr></tbody></table>
+<p>IDs are monotonic within each prefix. They never get reused.</p>
+<h3 id="how-items-move">How items move</h3>
+<p>The backlog isn’t a parking lot — items move into phases as work begins. The
+<code>Phase</code> column captures which phase an item landed in. The <code>Status</code> column
+tracks: <code>open</code> → <code>in-progress</code> → <code>resolved</code> (or <code>deferred</code> / <code>deprecated</code>).
+A resolved item stays in the backlog as searchable history; the agent doesn’t
+delete history.</p>
+<p>The agent (per Rule 3) <strong>auto-tracks discoveries</strong>: any bug, tech debt, or
+enhancement noticed during work lands in the backlog immediately, with the
+user notified.</p>
+<h2 id="config">Config</h2>
+<p><code>specs/config.md</code> is the project-shape settings file recipe templates
+read at execution time (ADR-0009). It tells momentum <strong>what kind of project
+this is</strong> so gates and release steps adapt instead of assuming npm + GitHub +
+a <code>staging → main</code> flow:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Example</th><th>What it drives</th></tr></thead><tbody><tr><td><code>language</code> / <code>framework</code></td><td><code>node</code> / <code>nextjs</code></td><td>verification defaults</td></tr><tr><td><code>test_command</code> / <code>build_command</code></td><td><code>npm test</code> / <code>npm run build</code></td><td><code>/complete-phase</code> step 3, <code>/brainstorm-phase</code> defaults</td></tr><tr><td><code>publish_target</code> / <code>release_flow</code></td><td><code>npm</code> / <code>tag-and-publish</code></td><td>release gate phrasing</td></tr><tr><td><code>git_forge</code> / <code>release_command</code></td><td><code>github</code> / <code>gh release create</code></td><td>which forge release command (if any)</td></tr><tr><td><code>end_state</code></td><td><code>merge-after-yes</code></td><td>how far the agent goes before handing back</td></tr><tr><td><code>branch_flow</code> / <code>protected_branches</code></td><td><code>staging, main</code></td><td>the merge sequence + which branches the pre-push hook guards</td></tr></tbody></table>
+<p><code>momentum init</code> infers these from your manifests + git remote; <code>/start-project</code>
+confirms them at founding; edit the file anytime. When the project shape
+changes (you switched forge, adopted a framework), <code>momentum config sync</code>
+re-infers, shows the drift, and applies your approved changes — nothing is
+ever written without your OK. The <strong>trust layer</strong> — human authorization for a
+protected-branch push — is invariant and never a preference; the only bypass
+is the auditable <code>MOMENTUM_SKIP_HOOKS=1</code>.</p>
+<h2 id="history">History</h2>
+<p>Every phase has a <code>history.md</code> — an <strong>append-only log</strong> with structured
+entries. The log is the only place where the <em>why</em> of a decision is captured
+<strong>at the moment it was made</strong>.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>### [DECISION] 2026-06-08 — Short title of the call</span></span>
+<span class="line"><span>Topics: phase-13, area, area</span></span>
+<span class="line"><span>Affects-phases: phase-13-site-polish</span></span>
+<span class="line"><span>Affects-specs: path/to/file.md</span></span>
+<span class="line"><span>Detail: One to three sentences describing what was decided and why.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span></code></pre>
+<h3 id="entry-types">Entry types</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Type</th><th>When to use</th></tr></thead><tbody><tr><td><code>[DECISION]</code></td><td>A call was made — technology choice, design direction, ADR created</td></tr><tr><td><code>[SCOPE_CHANGE]</code></td><td>Phase deliverables added or removed</td></tr><tr><td><code>[DISCOVERY]</code></td><td>Bug, tech debt, or enhancement found</td></tr><tr><td><code>[FEATURE]</code></td><td>New planned feature within the phase</td></tr><tr><td><code>[ARCH_CHANGE]</code></td><td>Architectural pattern shifted</td></tr><tr><td><code>[EVALUATOR]</code></td><td>Locked evaluator defined or evaluation set changed</td></tr><tr><td><code>[NOTE]</code></td><td>Anything else worth a future reader’s time</td></tr></tbody></table>
+<h3 id="why-append-only">Why append-only?</h3>
+<p>Specs document the <strong>current state</strong>. Commit messages document the
+<strong>mechanical change</strong>. Only history captures <strong>motivation</strong> — the
+constraint that made you pick path A over path B, the discovery that
+narrowed the design space, the scope cut that kept the phase shippable.</p>
+<p>Six months later, someone asks “why did we pick X here?” The commit just
+says <code>feat: pick X</code>. The spec says <code>we use X</code>. The history says
+<code>we picked X because Y didn't satisfy constraint Z; we explored W but the testing cost outweighed the marginal gain.</code></p>
+<p>That’s the constraint that’s load-bearing, not the chosen path.</p>
+<h3 id="a-worked-entry">A worked entry</h3>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>### [DECISION] 2026-06-07 — Astro Starlight as the site framework</span></span>
+<span class="line"><span>Topics: phase-12, tech-stack, astro, starlight</span></span>
+<span class="line"><span>Affects-phases: phase-12-public-site</span></span>
+<span class="line"><span>Affects-specs: specs/phases/phase-12-public-site/overview.md</span></span>
+<span class="line"><span>Detail: Markdown-first, zero-JS by default, beautiful docs theme + freedom</span></span>
+<span class="line"><span>for a custom landing page. Rejected alternatives: Docusaurus (heavier),</span></span>
+<span class="line"><span>VitePress (less landing flexibility), Nextra (Next.js overhead). Best fit</span></span>
+<span class="line"><span>for "landing + docs + easy UX" on a tight v1 timeline.</span></span></code></pre>
+<p>That entry is the difference between “we use Starlight” (which the spec says)
+and “we picked Starlight because the three alternatives didn’t fit the
+constraints” (which only history records).</p>
+<h3 id="doc-sync-at-phase-completion">Doc sync at phase completion</h3>
+<p>During a phase, the agent only writes to <code>history.md</code> (Rule 9). At
+completion, <code>/sync-docs</code> reads the history, identifies which other specs
+need updating (via topics + Affects-specs), and applies the updates in one
+batch. The agent doesn’t update specs mid-phase — that would let the
+reference move while everyone’s depending on it (Rule 10).</p>
+<h2 id="adrs">ADRs</h2>
+<p>When a decision is <strong>structural</strong> or <strong>contested</strong> enough to deserve its own
+document, momentum uses <strong>Architecture Decision Records</strong> at
+<code>specs/decisions/NNNN-title.md</code>. Each ADR captures:</p>
+<ul>
+<li><strong>Context</strong> — what problem are we solving, what constraints apply</li>
+<li><strong>Decision</strong> — the specific choice</li>
+<li><strong>Alternatives</strong> — what else we considered, with rejection rationale</li>
+<li><strong>Consequences</strong> — what becomes harder or easier after this choice</li>
+</ul>
+<p>ADRs supersede history entries when the decision becomes a <strong>reference point</strong>
+future phases need to consult — e.g., “we use the DIP pattern across all
+adapters” is an ADR because new adapters need to follow it.</p>
+<p>Format borrowed from Michael Nygard’s original ADR template; nothing exotic.</p>
+<h3 id="when-to-write-an-adr-vs-a-history-entry">When to write an ADR vs a history entry</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Write an ADR when…</th><th>Write a history entry when…</th></tr></thead><tbody><tr><td>The decision spans multiple phases</td><td>The decision is phase-local</td></tr><tr><td>The decision changes architecture</td><td>The decision is operational</td></tr><tr><td>Future readers will need to consult this directly</td><td>Future readers can find this via topic search</td></tr><tr><td>The “why” is genuinely contested</td><td>The “why” is clear-but-worth-recording</td></tr></tbody></table>
+<p>When in doubt: write the history entry first. If it gets referenced from a
+later phase’s history, promote it to an ADR then.</p>
+<h2 id="ecosystem-mode">Ecosystem mode</h2>
+<p>The optional layer for cross-project coordination. When you have multiple
+related projects, ecosystem mode adds:</p>
+<ul>
+<li>A shared <strong>ecosystem manifest</strong> (<code>ecosystem.json</code>)</li>
+<li><strong>Initiatives</strong> — features that span multiple projects</li>
+<li>A <strong>daily session log</strong> — auto-appended on commits / PRs across members</li>
+<li>Hard invariant: single-project usage is unchanged.</li>
+</ul>
+<h3 id="how-they-relate--ecosystem-mode--orchestration">How they relate — ecosystem mode + orchestration</h3>
+<p>These two are a <strong>pair</strong>, not alternatives:</p>
+<ul>
+<li><strong>Ecosystem mode = STATE layer.</strong> The durable record: manifest,
+initiatives, sessions, pointer blocks. Nouns. What the agent reads
+and writes.</li>
+<li><strong>Orchestration = ACTION layer.</strong> Four verbs the agent composes:
+<code>scout</code> / <code>dispatch</code> / <code>handoff</code> / <code>continue</code>. What the agent
+<em>does</em> across projects.</li>
+</ul>
+<p>Orchestration verbs read and write ecosystem state. Ecosystem state
+gives orchestration something durable to point at. Either alone is
+half the pattern — ecosystem without orchestration is bookkeeping;
+orchestration without ecosystem is action with no record.</p>
+<p><strong>Deep dives:</strong> <a href="/ecosystem/">Ecosystem mode</a> · <a href="/orchestration/">Orchestration</a></p>
+<h2 id="how-they-fit-together">How they fit together</h2>
+<p>Picture a single-project workflow:</p>
+<ol>
+<li>Something needs doing → land it in the <strong>backlog</strong> with a priority.</li>
+<li>When it’s time to ship it, pull it (and related items) into a <strong>phase</strong>.</li>
+<li>Run the phase. Every meaningful decision, discovery, or scope change
+lands in <strong>history</strong> at the moment it happens.</li>
+<li>Structural decisions get an <strong>ADR</strong> — promoted from history when they
+become future-readable references.</li>
+<li>At completion, <strong>doc sync</strong> propagates history into the other specs;
+<code>/complete-phase</code> runs verification, tags the release, and publishes.</li>
+</ol>
+<p>For multi-project workflows, <strong>ecosystem mode</strong> adds a coordination layer on
+top — initiatives + session log + orchestration primitives. Each member
+still runs the per-project loop unchanged.</p>
+<p>The point of every primitive is the same: <strong>state that outlives any single
+session</strong>, surfaced where the agent and the humans both look.</p> </article> <nav class="prevnext"> <a class="pn pn-prev" href="/getting-started/"> <span class="pn-dir">← Previous</span> <span class="pn-title">Getting started</span> </a> <a class="pn pn-next" href="/parallel-work/"> <span class="pn-dir">Next →</span> <span class="pn-title">Parallel work</span> </a> </nav> </div> </main> <!-- ON THIS PAGE --> <aside class="toc"> <div class="toc-inner"> <p class="side-label">On this page</p> <a class="toc-link" href="#phases" data-toc="phases"> Phases </a><a class="toc-link sub" href="#why-phases" data-toc="why-phases"> Why phases? </a><a class="toc-link sub" href="#the-group-execution-pattern" data-toc="the-group-execution-pattern"> The Group Execution Pattern </a><a class="toc-link sub" href="#phase-boundaries-are-git-boundaries" data-toc="phase-boundaries-are-git-boundaries"> Phase boundaries are git boundaries </a><a class="toc-link" href="#backlog" data-toc="backlog"> Backlog </a><a class="toc-link sub" href="#priorities" data-toc="priorities"> Priorities </a><a class="toc-link sub" href="#id-prefixes" data-toc="id-prefixes"> ID prefixes </a><a class="toc-link sub" href="#how-items-move" data-toc="how-items-move"> How items move </a><a class="toc-link" href="#config" data-toc="config"> Config </a><a class="toc-link" href="#history" data-toc="history"> History </a><a class="toc-link sub" href="#entry-types" data-toc="entry-types"> Entry types </a><a class="toc-link sub" href="#why-append-only" data-toc="why-append-only"> Why append-only? </a><a class="toc-link sub" href="#a-worked-entry" data-toc="a-worked-entry"> A worked entry </a><a class="toc-link sub" href="#doc-sync-at-phase-completion" data-toc="doc-sync-at-phase-completion"> Doc sync at phase completion </a><a class="toc-link" href="#adrs" data-toc="adrs"> ADRs </a><a class="toc-link sub" href="#when-to-write-an-adr-vs-a-history-entry" data-toc="when-to-write-an-adr-vs-a-history-entry"> When to write an ADR vs a history entry </a><a class="toc-link" href="#ecosystem-mode" data-toc="ecosystem-mode"> Ecosystem mode </a><a class="toc-link sub" href="#how-they-relate--ecosystem-mode--orchestration" data-toc="how-they-relate--ecosystem-mode--orchestration"> How they relate — ecosystem mode + orchestration </a><a class="toc-link" href="#how-they-fit-together" data-toc="how-they-fit-together"> How they fit together </a> </div> </aside> </div>  <div class="palette" data-palette hidden> <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search"> <div class="palette-head"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="ic" data-icon="lucide:search">   <use href="#ai:lucide:search"></use>  </svg> <input type="text" data-palette-input placeholder="Search pages and headings…" aria-label="Search pages and headings"> <kbd>esc</kbd> </div> <div class="palette-results" data-palette-results></div> </div> </div> <script type="application/json" id="mm-nav-data">{"pages":[{"slug":"getting-started","label":"Getting started","group":"Start here"},{"slug":"concepts","label":"Concepts","group":"Start here"},{"slug":"parallel-work","label":"Parallel work","group":"Start here"},{"slug":"skills","label":"Skills","group":"Reference"},{"slug":"rules","label":"Rules","group":"Reference"},{"slug":"ide-support","label":"IDE support","group":"Reference"},{"slug":"ecosystem","label":"Ecosystem","group":"Orchestration"},{"slug":"orchestration","label":"Cross-project actions","group":"Orchestration"},{"slug":"team","label":"Team mode","group":"Orchestration"},{"slug":"swarm","label":"Swarm","group":"Orchestration"},{"slug":"faq","label":"FAQ","group":"More"},{"slug":"about","label":"About","group":"More"}],"headings":[{"id":"phases","label":"Phases"},{"id":"why-phases","label":"Why phases?"},{"id":"the-group-execution-pattern","label":"The Group Execution Pattern"},{"id":"phase-boundaries-are-git-boundaries","label":"Phase boundaries are git boundaries"},{"id":"backlog","label":"Backlog"},{"id":"priorities","label":"Priorities"},{"id":"id-prefixes","label":"ID prefixes"},{"id":"how-items-move","label":"How items move"},{"id":"config","label":"Config"},{"id":"history","label":"History"},{"id":"entry-types","label":"Entry types"},{"id":"why-append-only","label":"Why append-only?"},{"id":"a-worked-entry","label":"A worked entry"},{"id":"doc-sync-at-phase-completion","label":"Doc sync at phase completion"},{"id":"adrs","label":"ADRs"},{"id":"when-to-write-an-adr-vs-a-history-entry","label":"When to write an ADR vs a history entry"},{"id":"ecosystem-mode","label":"Ecosystem mode"},{"id":"how-they-relate--ecosystem-mode--orchestration","label":"How they relate — ecosystem mode + orchestration"},{"id":"how-they-fit-together","label":"How they fit together"}]}</script> </div></body></html>  <script type="module">const h=document.documentElement;for(const e of document.querySelectorAll("[data-toggle-theme]"))e.addEventListener("click",()=>{const t=h.dataset.theme==="dark"?"light":"dark";h.dataset.theme=t;try{localStorage.setItem("mm-theme",t)}catch{}});const g=document.querySelector(".docs-grid");for(const e of document.querySelectorAll("[data-toggle-sidebar]"))e.addEventListener("click",()=>g?.classList.toggle("nav-open"));document.querySelector("[data-sidebar-scrim]")?.addEventListener("click",()=>g?.classList.remove("nav-open"));for(const e of document.querySelectorAll(".doc pre")){const t=document.createElement("button");t.type="button",t.className="code-copy",t.textContent="Copy",t.addEventListener("click",()=>{const o=e.querySelector("code")?.innerText??e.innerText;navigator.clipboard?.writeText(o),t.textContent="Copied",window.setTimeout(()=>t.textContent="Copy",1200)}),e.appendChild(t)}const p=[...document.querySelectorAll(".toc-link")];if(p.length){const e=p.map(o=>o.getAttribute("data-toc")),t=()=>{let o=e[0];for(const n of e){const l=n&&document.getElementById(n);l&&l.getBoundingClientRect().top<=130&&(o=n)}for(const n of p)n.classList.toggle("active",n.getAttribute("data-toc")===o)};window.addEventListener("scroll",t,{passive:!0}),t()}const i=document.querySelector("[data-palette]"),r=document.querySelector("[data-palette-input]"),c=document.querySelector("[data-palette-results]");let f={pages:[],headings:[]};try{f=JSON.parse(document.getElementById("mm-nav-data")?.textContent||"{}")}catch{}function w(e){const t=e.trim().toLowerCase(),o=(f.headings||[]).map(a=>({icon:"hash",label:a.label,sub:"On this page",href:"#"+a.id,jump:!0})),n=(f.pages||[]).map(a=>({icon:"file",label:a.label,sub:a.group,href:"/"+a.slug+"/"}));let l=[...o,...n];return t&&(l=l.filter(a=>a.label.toLowerCase().includes(t)||(a.sub||"").toLowerCase().includes(t))),l.slice(0,8)}let s=0;function m(e){if(!c)return;if(!e.length){c.innerHTML='<div class="pal-empty">No matches</div>';return}const t='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>',o='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';c.innerHTML=e.map((n,l)=>`<a class="pal-item${l===s?" active":""}" href="${n.href}" data-i="${l}"${n.jump?' data-jump="1"':""}>${n.icon==="hash"?t:o}<span class="pal-label">${n.label}</span><span class="pal-sub">${n.sub}</span></a>`).join("")}let d=[];function y(){d=w(r&&"value"in r?r.value:""),s=0,m(d)}function v(){i&&(i.hidden=!1,r&&(r.value="",y(),setTimeout(()=>r.focus(),20)))}function u(){i&&(i.hidden=!0)}function b(e){if(e)if(e.dataset.jump){u();const t=e.getAttribute("href").slice(1),o=document.getElementById(t);o&&window.scrollTo({top:o.getBoundingClientRect().top+window.scrollY-76,behavior:"smooth"})}else window.location.href=e.getAttribute("href")}for(const e of document.querySelectorAll("[data-open-palette]"))e.addEventListener("click",v);r?.addEventListener("input",y);i?.addEventListener("click",e=>{e.target===i&&u()});c?.addEventListener("click",e=>{const t=e.target.closest(".pal-item");t&&t.dataset.jump&&(e.preventDefault(),b(t))});window.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k")e.preventDefault(),i&&i.hidden?v():u();else if(e.key==="Escape")u();else if(!i?.hidden){const t=[...c?.querySelectorAll(".pal-item")||[]];if(!t.length)return;e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,m(d)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,m(d)):e.key==="Enter"&&(e.preventDefault(),b(t[s]))}});</script>

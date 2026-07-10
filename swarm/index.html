@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="/brand/png/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/brand/png/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/brand/png/momentum-app-180.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0023ae"><link rel="canonical" href="https://trymomentum.github.io/swarm/"><title>Swarm — momentum docs</title><meta name="description" content="One session, many projects, one feature. Conductor + per-project supervisors deliver a cross-project feature end-to-end in a single session. The sustained-delivery layer of momentum's orchestration model."><meta property="og:type" content="website"><meta property="og:title" content="Swarm — momentum docs"><meta property="og:description" content="One session, many projects, one feature. Conductor + per-project supervisors deliver a cross-project feature end-to-end in a single session. The sustained-delivery layer of momentum's orchestration model."><meta property="og:url" content="https://trymomentum.github.io/swarm/"><meta property="og:image" content="https://trymomentum.github.io/og/default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Swarm — momentum docs"><meta name="twitter:description" content="One session, many projects, one feature. Conductor + per-project supervisors deliver a cross-project feature end-to-end in a single session. The sustained-delivery layer of momentum's orchestration model."><meta name="twitter:image" content="https://trymomentum.github.io/og/default.png"><script>(function(){try{var t=localStorage.getItem('mm-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:'light';}catch(e){document.documentElement.dataset.theme='light';}})();</script><script>(function(){try{if(sessionStorage.getItem('mm-swept')){document.documentElement.classList.add('mm-swept');}else{sessionStorage.setItem('mm-swept','1');}}catch(e){}})();</script><link rel="stylesheet" href="/_astro/Icon.CfDLM5Ju.css">
+<link rel="stylesheet" href="/_astro/_..D1_BWr6T.css"></head> <body> <div class="ambient-layer" aria-hidden="true"></div> <div class="page mm-docs">  <header class="tb"> <nav class="tb-pillbar"> <a class="mm-brand tb-brand" href="/" aria-label="momentum"> <svg class="mm-mark" viewBox="0 0 48 48" width="24" height="24" fill="none" aria-hidden="true"> <path class="c c1" d="M11 15 20 24 11 33"></path> <path class="c c2" d="M20 15 29 24 20 33"></path> <path class="c c3" d="M29 15 38 24 29 33"></path> </svg> <span class="mm-word">momentum</span>  <span class="tb-pill">docs</span>  </a>  <script type="module">const t=document.documentElement;t.classList.contains("mm-swept")||window.setTimeout(()=>t.classList.add("mm-swept"),850);const s=window.matchMedia("(prefers-reduced-motion: reduce)");for(const e of document.querySelectorAll(".mm-brand"))e.addEventListener("mouseenter",()=>{s.matches||(e.classList.remove("mm-sweep"),e.getBoundingClientRect(),e.classList.add("mm-sweep"))});</script> <button type="button" class="tb-search" data-open-palette aria-label="Search docs"> <svg width="1em" height="1em" class="ic" data-icon="lucide:search">   <symbol id="ai:lucide:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:lucide:search"></use>  </svg> <span>Search docs</span> <kbd>⌘K</kbd> </button> <div class="tb-right"> <button type="button" class="tb-icon tb-menu" data-toggle-sidebar aria-label="Toggle navigation"> <svg width="1em" height="1em" class="ic" data-icon="lucide:menu">   <symbol id="ai:lucide:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></symbol><use href="#ai:lucide:menu"></use>  </svg> </button> <button type="button" class="tb-icon" data-toggle-theme aria-label="Toggle theme"> <svg width="1em" height="1em" class="ic" data-icon="lucide:sun-moon">   <symbol id="ai:lucide:sun-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m2.837 12.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4m7-3l-1.256 1.256M20 12h2"/></symbol><use href="#ai:lucide:sun-moon"></use>  </svg> </button> <a class="tb-icon" href="https://github.com/LiminaLabsAI/momentum" target="_blank" rel="noopener" aria-label="GitHub"> <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg> </a> </div> </nav> </header> <div class="docs-grid" id="top"> <!-- SIDEBAR --> <aside class="sidebar" data-sidebar> <nav> <div class="side-group"> <p class="side-label">Start here</p> <a class="side-link" href="/getting-started/"> Getting started </a><a class="side-link" href="/concepts/"> Concepts </a><a class="side-link" href="/parallel-work/"> Parallel work </a> </div><div class="side-group"> <p class="side-label">Reference</p> <a class="side-link" href="/skills/"> Skills </a><a class="side-link" href="/rules/"> Rules </a><a class="side-link" href="/ide-support/"> IDE support </a> </div><div class="side-group"> <p class="side-label">Orchestration</p> <a class="side-link" href="/ecosystem/"> Ecosystem </a><a class="side-link" href="/orchestration/"> Cross-project actions </a><a class="side-link" href="/team/"> Team mode </a><a class="side-link active" href="/swarm/" aria-current="page"> Swarm </a> </div><div class="side-group"> <p class="side-label">More</p> <a class="side-link" href="/faq/"> FAQ </a><a class="side-link" href="/about/"> About </a> </div> </nav> </aside> <div class="sidebar-scrim" data-sidebar-scrim aria-hidden="true"></div> <!-- ARTICLE --> <main class="article"> <div class="doc-wrap"> <div class="doc-crumb"> Orchestration<span class="sep">›</span><span class="cur">Swarm</span> </div> <div class="doc-head"> <h1>Swarm</h1> </div> <p class="doc-lead">One session, many projects, one feature. Conductor + per-project supervisors deliver a cross-project feature end-to-end in a single session. The sustained-delivery layer of momentum&#39;s orchestration model.</p> <article class="doc"> <blockquote>
+<p><strong>Orchestration</strong> is momentum’s umbrella for multi-project work. Three layers: <strong><a href="/ecosystem/">Ecosystem</a></strong> (shared state), <strong><a href="/orchestration/">Cross-project actions</a></strong> (one-shot moves), <strong>Swarm</strong> (sustained delivery — this page). For a one-shot move (<code>scout</code> / <code>dispatch</code> / <code>handoff</code> / <code>continue</code>), the lighter Cross-project actions layer is usually what you want. Swarm is for multi-hour, dependency-ordered, multi-supervisor feature delivery.</p>
+</blockquote>
+<p>A <strong>swarm</strong> is a declared cross-project work unit driven from ONE agent
+session. Your session becomes the <strong>conductor</strong>. The conductor spawns
+one <strong>supervisor</strong> subagent per impacted project, each pinned to that
+project’s working directory with its own fresh context. Each supervisor
+runs momentum’s normal <code>/start-phase</code> → implement → <code>/sync-docs</code> →
+<code>/complete-phase</code> loop INSIDE its project.</p>
+<p>The conductor coordinates <strong>waves</strong> (computed from <code>ecosystem.json</code>
+dependency edges), surfaces inbox decisions, broadcasts cross-cutting
+concerns, and synthesizes per-project retrospectives into the
+initiative at fan-in.</p>
+<p>Agents are stateless across turns; <strong>state lives in files</strong>. A swarm
+survives session boundaries the same way a phase does — every
+state-changing action writes to disk; <code>/swarm resume</code> reconstitutes
+from disk.</p>
+<blockquote>
+<p>v0.20.0 ships <strong>Claude Code only</strong>. Codex + Antigravity parity is
+Phase 18 (v0.20.2). The <code>core/swarm/</code> library is platform-agnostic —
+only the spawn wiring is platform-specific.</p>
+</blockquote>
+<h2 id="when-to-use-a-swarm">When to use a swarm</h2>
+<ul>
+<li>A feature spans <strong>two or more momentum-installed projects</strong> AND has
+dependency ordering (e.g. frontend depends on backend depends on
+shared-types).</li>
+<li>You want ONE session driving the whole feature, not three serial
+sessions.</li>
+<li>An initiative exists or is about to exist at <code>&#x3C;eco>/initiatives/&#x3C;slug>.md</code>.</li>
+</ul>
+<h2 id="when-not-to-use-a-swarm">When NOT to use a swarm</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>You want…</th><th>Use this instead</th></tr></thead><tbody><tr><td>Cross-project read-only audit</td><td><a href="/orchestration/#dispatch"><code>/dispatch</code></a></td></tr><tr><td>Single-project phase</td><td><code>/start-phase</code> directly</td></tr><tr><td>Context transfer to another session</td><td><a href="/orchestration/#handoff"><code>/handoff</code></a></td></tr></tbody></table>
+<h2 id="architecture--files-as-channels-no-daemon">Architecture — files-as-channels, no daemon</h2>
+<svg id="mermaid-0" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 1233.6796875px;" viewBox="0 0 1233.6796875 445.31219482421875" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#mermaid-0{font-family:'Geist Variable',Geist,system-ui,sans-serif;font-size:15px;fill:#0d1330;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-0 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-0 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-0 .error-icon{fill:#f3f5fb;}#mermaid-0 .error-text{fill:#0c0a04;stroke:#0c0a04;}#mermaid-0 .edge-thickness-normal{stroke-width:1px;}#mermaid-0 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-0 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-0 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-0 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-0 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-0 .marker{fill:#4a4f5e;stroke:#4a4f5e;}#mermaid-0 .marker.cross{stroke:#4a4f5e;}#mermaid-0 svg{font-family:'Geist Variable',Geist,system-ui,sans-serif;font-size:15px;}#mermaid-0 p{margin:0;}#mermaid-0 .label{font-family:'Geist Variable',Geist,system-ui,sans-serif;color:#0d1330;}#mermaid-0 .cluster-label text{fill:#0c0a04;}#mermaid-0 .cluster-label span{color:#0c0a04;}#mermaid-0 .cluster-label span p{background-color:transparent;}#mermaid-0 .label text,#mermaid-0 span{fill:#0d1330;color:#0d1330;}#mermaid-0 .node rect,#mermaid-0 .node circle,#mermaid-0 .node ellipse,#mermaid-0 .node polygon,#mermaid-0 .node path{fill:#dde5ff;stroke:#2f5be0;stroke-width:1px;}#mermaid-0 .rough-node .label text,#mermaid-0 .node .label text,#mermaid-0 .image-shape .label,#mermaid-0 .icon-shape .label{text-anchor:middle;}#mermaid-0 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-0 .rough-node .label,#mermaid-0 .node .label,#mermaid-0 .image-shape .label,#mermaid-0 .icon-shape .label{text-align:center;}#mermaid-0 .node.clickable{cursor:pointer;}#mermaid-0 .root .anchor path{fill:#4a4f5e!important;stroke-width:0;stroke:#4a4f5e;}#mermaid-0 .arrowheadPath{fill:#0b0b0b;}#mermaid-0 .edgePath .path{stroke:#4a4f5e;stroke-width:1px;}#mermaid-0 .flowchart-link{stroke:#4a4f5e;fill:none;}#mermaid-0 .edgeLabel{background-color:#eceef6;text-align:center;}#mermaid-0 .edgeLabel p{background-color:#eceef6;}#mermaid-0 .edgeLabel rect{opacity:0.5;background-color:#eceef6;fill:#eceef6;}#mermaid-0 .labelBkg{background-color:rgba(236, 238, 246, 0.5);}#mermaid-0 .cluster rect{fill:#f3f5fb;stroke:#c3cbe0;stroke-width:1px;}#mermaid-0 .cluster text{fill:#0c0a04;}#mermaid-0 .cluster span{color:#0c0a04;}#mermaid-0 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:'Geist Variable',Geist,system-ui,sans-serif;font-size:12px;background:#f3f5fb;border:1px solid #c3cbe0;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-0 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#0d1330;}#mermaid-0 rect.text{fill:none;stroke-width:0;}#mermaid-0 .icon-shape,#mermaid-0 .image-shape{background-color:#eceef6;text-align:center;}#mermaid-0 .icon-shape p,#mermaid-0 .image-shape p{background-color:#eceef6;padding:2px;}#mermaid-0 .icon-shape .label rect,#mermaid-0 .image-shape .label rect{opacity:0.5;background-color:#eceef6;fill:#eceef6;}#mermaid-0 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-0 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-0 .node .neo-node{stroke:#2f5be0;}#mermaid-0 [data-look="neo"].node rect,#mermaid-0 [data-look="neo"].cluster rect,#mermaid-0 [data-look="neo"].node polygon{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node path{stroke:url(#mermaid-0-gradient);stroke-width:1px;}#mermaid-0 [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node .neo-line path{stroke:#2f5be0;filter:none;}#mermaid-0 [data-look="neo"].node circle{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].node circle .state-start{fill:#000000;}#mermaid-0 [data-look="neo"].icon-shape .icon{fill:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 [data-look="neo"].icon-shape .icon-neo path{stroke:url(#mermaid-0-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-0 :root{--mermaid-font-family:arial,sans-serif;}</style><g><marker id="mermaid-0_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-0_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-0_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-0_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></polygon></marker><marker id="mermaid-0_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-0_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-0_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-0_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-0_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-0_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-0_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"></path></marker><marker id="mermaid-0_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M547.352,58.137L485.279,68.323C423.207,78.508,299.063,98.879,236.99,116.865C174.918,134.85,174.918,150.45,174.918,158.25L174.918,166.05" id="mermaid-0-L_U_S1_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_U_S1_0" data-points="W3sieCI6NTQ3LjM1MTU2MjUsInkiOjU4LjEzNzQ3Mjk0ODY2MTEyfSx7IngiOjE3NC45MTc5Njg3NSwieSI6MTE5LjI1fSx7IngiOjE3NC45MTc5Njg3NSwieSI6MTcwLjA0OTYxNzc2NzMzMzk4fV0=" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M624.367,83L624.367,89.042C624.367,95.083,624.367,107.167,624.367,121.008C624.367,134.85,624.367,150.45,624.367,158.25L624.367,166.05" id="mermaid-0-L_U_S2_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_U_S2_0" data-points="W3sieCI6NjI0LjM2NzE4NzUsInkiOjgzfSx7IngiOjYyNC4zNjcxODc1LCJ5IjoxMTkuMjV9LHsieCI6NjI0LjM2NzE4NzUsInkiOjE3MC4wNDk2MTc3NjczMzM5OH1d" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M701.383,57.001L770.861,67.375C840.339,77.75,979.294,98.5,1048.772,116.675C1118.25,134.85,1118.25,150.45,1118.25,158.25L1118.25,166.05" id="mermaid-0-L_U_S3_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_U_S3_0" data-points="W3sieCI6NzAxLjM4MjgxMjUsInkiOjU3LjAwMDUwNjE5Mjk1NDQyNX0seyJ4IjoxMTE4LjI1LCJ5IjoxMTkuMjV9LHsieCI6MTExOC4yNSwieSI6MTcwLjA0OTYxNzc2NzMzMzk4fV0=" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M144.246,245.05L137.321,253.516C130.396,261.983,116.545,278.916,109.62,292.76C102.695,306.605,102.695,317.36,102.695,322.738L102.695,328.116" id="mermaid-0-L_S1_M1_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_S1_M1_0" data-points="W3sieCI6MTQ0LjI0NTY5OTk2OTUwMDkyLCJ5IjoyNDUuMDQ5NjE3NzY3MzMzOTh9LHsieCI6MTAyLjY5NTMxMjUsInkiOjI5NS44NDkyMzU1MzQ2Njc5N30seyJ4IjoxMDIuNjk1MzEyNSwieSI6MzMyLjExNTUxNjY2MjU5NzY2fV0=" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M624.367,245.05L624.367,253.516C624.367,261.983,624.367,278.916,624.367,292.758C624.367,306.599,624.367,317.349,624.367,322.724L624.367,328.099" id="mermaid-0-L_S2_M2_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_S2_M2_0" data-points="W3sieCI6NjI0LjM2NzE4NzUsInkiOjI0NS4wNDk2MTc3NjczMzM5OH0seyJ4Ijo2MjQuMzY3MTg3NSwieSI6Mjk1Ljg0OTIzNTUzNDY2Nzk3fSx7IngiOjYyNC4zNjcxODc1LCJ5IjozMzIuMDk5MjM1NTM0NjY3OTd9XQ==" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M1118.25,245.05L1118.25,253.516C1118.25,261.983,1118.25,278.916,1118.25,292.768C1118.25,306.62,1118.25,317.39,1118.25,322.775L1118.25,328.16" id="mermaid-0-L_S3_M3_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_S3_M3_0" data-points="W3sieCI6MTExOC4yNSwieSI6MjQ1LjA0OTYxNzc2NzMzMzk4fSx7IngiOjExMTguMjUsInkiOjI5NS44NDkyMzU1MzQ2Njc5N30seyJ4IjoxMTE4LjI1LCJ5IjozMzIuMTYwMTAyODQ0MjM4M31d" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M701.383,68.472L729.757,76.935C758.13,85.398,814.878,102.324,843.251,116.162C871.625,130,871.625,140.75,871.625,146.125L871.625,151.5" id="mermaid-0-L_U_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_U_B_0" data-points="W3sieCI6NzAxLjM4MjgxMjUsInkiOjY4LjQ3MTU3ODg4MDg0OTMxfSx7IngiOjg3MS42MjUsInkiOjExOS4yNX0seyJ4Ijo4NzEuNjI1LCJ5IjoxNTUuNX1d" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M224.584,245.05L235.797,253.516C247.01,261.983,269.437,278.916,286.206,293.464C302.975,308.012,314.087,320.175,319.643,326.256L325.198,332.338" id="mermaid-0-L_S1_I_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_S1_I_0" data-points="W3sieCI6MjI0LjU4MzUyMDMwNzcxNDQsInkiOjI0NS4wNDk2MTc3NjczMzM5OH0seyJ4IjoyOTEuODYzMjgxMjUsInkiOjI5NS44NDkyMzU1MzQ2Njc5N30seyJ4IjozMjcuODk2Mjg0ODA5MjYyNTcsInkiOjMzNS4yOTA5Mjg3MDA2MTc4fV0=" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path><path d="M547.352,73.329L526.171,80.982C504.99,88.636,462.628,103.943,441.447,126.313C420.266,148.683,420.266,178.116,420.266,207.55C420.266,236.983,420.266,266.416,417.685,286.754C415.104,307.091,409.942,318.333,407.361,323.954L404.78,329.575" id="mermaid-0-L_U_I_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_U_I_0" data-points="W3sieCI6NTQ3LjM1MTU2MjUsInkiOjczLjMyODgwMzgyNzc1MTE5fSx7IngiOjQyMC4yNjU2MjUsInkiOjExOS4yNX0seyJ4Ijo0MjAuMjY1NjI1LCJ5IjoyMDcuNTQ5NjE3NzY3MzMzOTh9LHsieCI6NDIwLjI2NTYyNSwieSI6Mjk1Ljg0OTIzNTUzNDY2Nzk3fSx7IngiOjQwMy4xMTA3NTAzNDMwNjQyNCwieSI6MzMzLjIxMDIzMTg4MjQwMDF9XQ==" data-look="classic" marker-end="url(#mermaid-0_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(174.91796875, 119.25)"><g class="label" data-id="L_U_S1_0" transform="translate(-28.0625, -11.25)"><foreignObject width="56.125" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>spawns</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(624.3671875, 119.25)"><g class="label" data-id="L_U_S2_0" transform="translate(-28.0625, -11.25)"><foreignObject width="56.125" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>spawns</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(1118.25, 119.25)"><g class="label" data-id="L_U_S3_0" transform="translate(-28.0625, -11.25)"><foreignObject width="56.125" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>spawns</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(102.6953125, 295.84923553466797)"><g class="label" data-id="L_S1_M1_0" transform="translate(-61.6171875, -11.25)"><foreignObject width="123.234375" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>writes saga step</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(624.3671875, 295.84923553466797)"><g class="label" data-id="L_S2_M2_0" transform="translate(-61.6171875, -11.25)"><foreignObject width="123.234375" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>writes saga step</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(1118.25, 295.84923553466797)"><g class="label" data-id="L_S3_M3_0" transform="translate(-61.6171875, -11.25)"><foreignObject width="123.234375" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>writes saga step</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(871.625, 119.25)"><g class="label" data-id="L_U_B_0" transform="translate(-69.4375, -11.25)"><foreignObject width="138.875" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>reads board cache</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(279.54084, 286.54517)"><g class="label" data-id="L_S1_I_0" transform="translate(-62.828125, -11.25)"><foreignObject width="125.65625" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>blocked → writes</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(420.265625, 207.54961776733398)"><g class="label" data-id="L_U_I_0" transform="translate(-31.078125, -11.25)"><foreignObject width="62.15625" height="22.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>resolves</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="mermaid-0-flowchart-U-0" data-look="classic" transform="translate(624.3671875, 45.5)"><rect class="basic label-container" style="" x="-77.015625" y="-37.5" width="154.03125" height="75"></rect><g class="label" style="" transform="translate(-47.015625, -22.5)"><rect></rect><foreignObject width="94.03125" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>your session<br></br>= conductor</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-S1-1" data-look="classic" transform="translate(174.91796875, 207.54961776733398)"><rect class="basic label-container" style="" x="-107.8984375" y="-37.5" width="215.796875" height="75"></rect><g class="label" style="" transform="translate(-77.8984375, -22.5)"><rect></rect><foreignObject width="155.796875" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>supervisor: project-a<br></br>(claude --bg --cwd a)</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-S2-3" data-look="classic" transform="translate(624.3671875, 207.54961776733398)"><rect class="basic label-container" style="" x="-108.0625" y="-37.5" width="216.125" height="75"></rect><g class="label" style="" transform="translate(-78.0625, -22.5)"><rect></rect><foreignObject width="156.125" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>supervisor: project-b<br></br>(claude --bg --cwd b)</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-S3-5" data-look="classic" transform="translate(1118.25, 207.54961776733398)"><rect class="basic label-container" style="" x="-107.4296875" y="-37.5" width="214.859375" height="75"></rect><g class="label" style="" transform="translate(-77.4296875, -22.5)"><rect></rect><foreignObject width="154.859375" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>supervisor: project-c<br></br>(claude --bg --cwd c)</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-M1-7" data-look="classic" transform="translate(102.6953125, 384.7057189941406)"><path d="M0,15.060136176134389 a94.6953125,15.060136176134389 0,0,0 189.390625,0 a94.6953125,15.060136176134389 0,0,0 -189.390625,0 l0,75.06013617613439 a94.6953125,15.060136176134389 0,0,0 189.390625,0 l0,-75.06013617613439" class="basic label-container outer-path" style="" transform="translate(-94.6953125, -52.59020426420159)"></path><g class="label" style="" transform="translate(-87.1953125, -12.5)"><rect></rect><foreignObject width="174.390625" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>&#x3C;a>/.momentum/runs/<br></br>dispatch-run-NNN.json</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-M2-9" data-look="classic" transform="translate(624.3671875, 384.7057189941406)"><path d="M0,15.07099240430919 a94.8671875,15.07099240430919 0,0,0 189.734375,0 a94.8671875,15.07099240430919 0,0,0 -189.734375,0 l0,75.0709924043092 a94.8671875,15.07099240430919 0,0,0 189.734375,0 l0,-75.0709924043092" class="basic label-container outer-path" style="" transform="translate(-94.8671875, -52.606488606463785)"></path><g class="label" style="" transform="translate(-87.3671875, -12.5)"><rect></rect><foreignObject width="174.734375" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>&#x3C;b>/.momentum/runs/<br></br>dispatch-run-NNN.json</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-M3-11" data-look="classic" transform="translate(1118.25, 384.7057189941406)"><path d="M0,15.030407257863516 a94.2265625,15.030407257863516 0,0,0 188.453125,0 a94.2265625,15.030407257863516 0,0,0 -188.453125,0 l0,75.03040725786352 a94.2265625,15.030407257863516 0,0,0 188.453125,0 l0,-75.03040725786352" class="basic label-container outer-path" style="" transform="translate(-94.2265625, -52.545610886795274)"></path><g class="label" style="" transform="translate(-86.7265625, -12.5)"><rect></rect><foreignObject width="173.453125" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>&#x3C;c>/.momentum/runs/<br></br>dispatch-run-NNN.json</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-B-13" data-look="classic" transform="translate(871.625, 207.54961776733398)"><path d="M0,14.699747643817272 a89.1953125,14.699747643817272 0,0,0 178.390625,0 a89.1953125,14.699747643817272 0,0,0 -178.390625,0 l0,74.69974764381728 a89.1953125,14.699747643817272 0,0,0 178.390625,0 l0,-74.69974764381728" class="basic label-container outer-path" style="" transform="translate(-89.1953125, -52.049621465725906)"></path><g class="label" style="" transform="translate(-81.6953125, -12.5)"><rect></rect><foreignObject width="163.390625" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>&#x3C;eco>/swarms/&#x3C;id>/<br></br>board.json (~3KB)</p></span></div></foreignObject></g></g><g class="node default" id="mermaid-0-flowchart-I-15" data-look="classic" transform="translate(378.8515625, 384.7057189941406)"><path d="M0,14.699747643817272 a89.1953125,14.699747643817272 0,0,0 178.390625,0 a89.1953125,14.699747643817272 0,0,0 -178.390625,0 l0,74.69974764381728 a89.1953125,14.699747643817272 0,0,0 178.390625,0 l0,-74.69974764381728" class="basic label-container outer-path" style="" transform="translate(-89.1953125, -52.049621465725906)"></path><g class="label" style="" transform="translate(-81.6953125, -12.5)"><rect></rect><foreignObject width="163.390625" height="45"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>&#x3C;eco>/swarms/&#x3C;id>/<br></br>inbox/NNNN-slug.md</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="mermaid-0-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><defs><filter id="mermaid-0-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><linearGradient id="mermaid-0-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2f5be0" stop-opacity="1"></stop><stop offset="100%" stop-color="#8b93b8" stop-opacity="1"></stop></linearGradient></svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Layer</th><th>Owns</th><th>Reads</th></tr></thead><tbody><tr><td><strong>Conductor</strong> (your session)</td><td><code>&#x3C;eco>/swarms/&#x3C;id>/manifest.json</code> + <code>board.json</code> + <code>contracts/</code> + <code>inbox/</code> + <code>signals/</code> + <code>changes/</code></td><td>Per-supervisor <code>dispatch-run-&#x3C;id>.json</code> (status only)</td></tr><tr><td><strong>Supervisor</strong> (per project)</td><td><code>&#x3C;project>/specs/phases/.../*</code> + <code>&#x3C;project>/.momentum/runs/dispatch-run-&#x3C;id>.json</code></td><td>Its phase brief + contract + history.md tail</td></tr></tbody></table>
+<p>No daemon. No message broker. No server. Just files in the ecosystem
+project, with the same <code>mkdir</code>-lock pattern <code>session-append.sh</code>
+already uses for race-safe writes.</p>
+<h2 id="indexing--the-load-bearing-efficiency-design">Indexing — the load-bearing efficiency design</h2>
+<p>Without indexing, a 200-turn × 5-project swarm consumes ~60M tokens
+($50–100). Four layered strategies cut that 95%:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Strategy</th><th>Mechanism</th><th>Win</th></tr></thead><tbody><tr><td><strong>A</strong> Materialized board cache</td><td><code>board.json</code> regenerated on every manifest write; conductor reads ONLY this</td><td>~290KB → ~3KB per turn</td></tr><tr><td><strong>B</strong> Git HEAD SHA invalidation</td><td>Per-project <code>last_seen_sha</code> cheaply revalidated via <code>git rev-parse HEAD</code></td><td>Unchanged projects skip refresh</td></tr><tr><td><strong>C</strong> Incremental log + history tail</td><td><code>.offsets.json</code> tracks byte offsets; never re-read full <code>history.md</code></td><td>&#x3C;500B typical delta</td></tr><tr><td><strong>D</strong> Supervisor context isolation</td><td>cwd-pinned spawn; conductor NEVER loads supervisor context</td><td>Bounded per-supervisor cost</td></tr></tbody></table>
+<p>End-to-end scenario evidence (3-project linear, 4-project diamond,
+5-project wide fan-out): p95 conductor-turn cost <strong>800–1200 bytes</strong>
+across all three. Target was &#x3C;5KB.</p>
+<h2 id="three-modes">Three modes</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Mode</th><th>Behavior</th><th>When to pick</th></tr></thead><tbody><tr><td><code>checkpoint</code> (default)</td><td>Plan approval + wave-boundary approval; inbox surfaces during waves</td><td>First runs, multi-team coordination, anything with significant risk</td></tr><tr><td><code>autopilot</code></td><td>Plan approval only; auto-advance through all waves; inbox auto-halts the supervisor that raised it</td><td>Trusted runs, internal refactors, contract-stable changes</td></tr><tr><td><code>interactive</code></td><td>Every supervisor task surfaces for approval before execution</td><td><strong>Deferred to v0.20.x</strong> (UI complexity)</td></tr></tbody></table>
+<p>Mode is set per-swarm at <code>/swarm start</code> and stored in the manifest.</p>
+<h2 id="eight-intervention-patterns">Eight intervention patterns</h2>
+<p>v0.20.0 ships 5 of 8. The remaining 3 are scoped for v0.20.x.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Pattern</th><th>Shipped</th><th>How</th></tr></thead><tbody><tr><td>1. Pre-flight plan approval</td><td>✓ v0.20.0</td><td><code>/swarm start</code> renders plan; you approve before spawn</td></tr><tr><td>2. Wave checkpoint</td><td>✓ v0.20.0</td><td>Between waves in <code>checkpoint</code> mode</td></tr><tr><td>3. Mid-flight question (inbox)</td><td>✓ v0.20.0</td><td>Supervisor writes <code>inbox/NNNN-&#x3C;slug>.md</code>; conductor surfaces</td></tr><tr><td>4. Context push (<code>/swarm tell</code>)</td><td>✓ v0.20.0</td><td>Appends to one supervisor’s <code>swarm-context.md</code></td></tr><tr><td>5. Broadcast</td><td>✓ v0.20.0</td><td>Appends to every supervisor’s <code>swarm-context.md</code></td></tr><tr><td>6. Discuss thread</td><td>v0.20.x</td><td>Sustained sub-chat with one supervisor</td></tr><tr><td>7. Manual takeover (pause/resume)</td><td>v0.20.x</td><td>Pause one supervisor without halting the swarm</td></tr><tr><td>8. Rewind</td><td>v0.20.x</td><td>Revert one supervisor to a known-good state</td></tr></tbody></table>
+<h2 id="subcommands">Subcommands</h2>
+<p>Both <code>/swarm</code> (Claude Code slash) and <code>momentum swarm</code> (CLI) produce
+the same on-disk artifacts. Use whichever door fits the moment.</p>
+<h3 id="swarm-start-slug---initiative-slug---repos-r1r2---phase-phase-slug---mode-checkpointautopilot"><code>/swarm start &#x3C;slug> --initiative &#x3C;slug> --repos r1,r2,... --phase &#x3C;phase-slug> [--mode checkpoint|autopilot]</code></h3>
+<p>Plan + spawn Wave 1. Default is dry-run (prints the spawn directives).
+Pass <code>--spawn</code> to actually launch <code>claude --bg --cwd</code> background
+sessions per Wave 1 project.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> start</span><span style="color:#A5D6FF"> user-auth</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --initiative</span><span style="color:#A5D6FF"> user-auth</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --repos</span><span style="color:#A5D6FF"> shared-types,backend,frontend</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --phase</span><span style="color:#A5D6FF"> phase-3-user-auth</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --mode</span><span style="color:#A5D6FF"> checkpoint</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --spawn</span></span></code></pre>
+<h3 id="swarm-status-swarm-id"><code>/swarm status &#x3C;swarm-id></code></h3>
+<p>Render the materialized board cache (~3KB). Pass <code>--json</code> for
+machine-readable.</p>
+<h3 id="swarm-tell-swarm-id-repo-text"><code>/swarm tell &#x3C;swarm-id> &#x3C;repo> "&#x3C;text>"</code></h3>
+<p>Append a note to one supervisor’s <code>swarm-context.md</code>. Use for
+project-specific clarifications.</p>
+<h3 id="swarm-broadcast-swarm-id-text"><code>/swarm broadcast &#x3C;swarm-id> "&#x3C;text>"</code></h3>
+<p>Append a note to every supervisor’s <code>swarm-context.md</code>. Use for
+swarm-wide constraints.</p>
+<h3 id="swarm-inbox-list-swarm-id--write--resolve"><code>/swarm inbox list &#x3C;swarm-id></code> / <code>write</code> / <code>resolve</code></h3>
+<p>Inbox protocol. Supervisor writes when blocked; conductor surfaces;
+you answer.</p>
+<h3 id="swarm-verify-swarm-id"><code>/swarm verify &#x3C;swarm-id></code></h3>
+<p>Contract verifier + initiative back-reference + brief frontmatter
+check. Returns exit code 0 = OK, non-zero = issues to resolve.</p>
+<h3 id="swarm-preview-merge-swarm-id"><code>/swarm preview-merge &#x3C;swarm-id></code></h3>
+<p>Run <code>git merge --no-commit --no-ff</code> for every supervisor branch
+against <code>main</code>; surface conflicts as inbox items. Always aborts — no
+actual merge.</p>
+<h3 id="swarm-budget-swarm-id-repo-n---n"><code>/swarm budget &#x3C;swarm-id> &#x3C;repo> +N | -N</code></h3>
+<p>Extend or contract a supervisor’s token budget. Default is 300k per
+supervisor.</p>
+<h3 id="swarm-complete-swarm-id"><code>/swarm complete &#x3C;swarm-id></code></h3>
+<p>Synthesize per-project retrospectives into the initiative’s
+<code>Per-repo contributions</code> section; write cross-project changeset to
+<code>&#x3C;eco>/changes/&#x3C;id>.md</code>.</p>
+<h3 id="swarm-resume-swarm-id---session-id"><code>/swarm resume &#x3C;swarm-id> [--session &#x3C;id>]</code></h3>
+<p>Reattach a session to an existing swarm. Disk-only reconstitution —
+no in-memory state required. Survives kill-9.</p>
+<h3 id="swarm-cancel-swarm-id---reason-text"><code>/swarm cancel &#x3C;swarm-id> [--reason "&#x3C;text>"]</code></h3>
+<p>Graceful halt. Halts every supervisor; preserves all artifacts
+(branches NOT force-pushed or deleted) for forensics.</p>
+<h2 id="worked-example--3-project-linear-feature">Worked example — 3-project linear feature</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#8B949E"># Plan + spawn Wave 1 (shared-types)</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> start</span><span style="color:#A5D6FF"> payments</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --initiative</span><span style="color:#A5D6FF"> payments</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --repos</span><span style="color:#A5D6FF"> shared-types,backend,frontend</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --phase</span><span style="color:#A5D6FF"> phase-7-payments</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --mode</span><span style="color:#A5D6FF"> checkpoint</span><span style="color:#FF7B72"> \</span></span>
+<span class="line"><span style="color:#79C0FF">  --spawn</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8B949E"># After Wave 1 supervisor reports done:</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> status</span><span style="color:#A5D6FF"> 0001-payments</span></span>
+<span class="line"><span style="color:#8B949E"># (checkpoint pauses here; user approves Wave 2)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8B949E"># At completion:</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> verify</span><span style="color:#A5D6FF"> 0001-payments</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> preview-merge</span><span style="color:#A5D6FF"> 0001-payments</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> complete</span><span style="color:#A5D6FF"> 0001-payments</span></span></code></pre>
+<h2 id="recovering-after-a-session-kill">Recovering after a session kill</h2>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#8B949E"># Session 1 killed mid-Wave 2; session 2 reattaches:</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> swarm</span><span style="color:#A5D6FF"> resume</span><span style="color:#A5D6FF"> 0001-payments</span><span style="color:#79C0FF"> --session</span><span style="color:#A5D6FF"> sess_new</span></span>
+<span class="line"><span style="color:#8B949E"># Conductor reads manifest + board + offsets from disk; continues the poll loop.</span></span></code></pre>
+<h2 id="whats-next-phase-175--v0201">What’s next (Phase 17.5 — v0.20.1)</h2>
+<p>v0.20.0 bakes in the schema hooks for forward-compatible portability.
+v0.20.1 (Phase 17.5) will light up three commands:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Scenario</th></tr></thead><tbody><tr><td><code>/swarm focus &#x3C;repo></code></td><td>Split a running swarm into a focused side-session — one supervisor moves to a new conductor; the rest stay with the original</td></tr><tr><td><code>/swarm join &#x3C;swarm-id></code></td><td>Join an independent session to an existing swarm as a co-conductor</td></tr><tr><td><code>/swarm absorb &#x3C;other-id></code></td><td>Converge multiple swarms back into one — <code>/swarm verify</code> checks contract compatibility before allowing the merge</td></tr></tbody></table>
+<p>The schema hooks are already present in v0.20.0 — <code>repos[*].owner</code>,
+<code>lease_expires_at</code>, <code>lease_renewed_at</code>, <code>claimed_by_session</code>,
+top-level <code>sessions[]</code>, reserved <code>signals/</code> + <code>tokens/</code> directories.
+v0.20.0 always sets <code>owner = current session</code>; v0.20.1 turns lease
+enforcement on without any schema migration.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr></thead><tbody><tr><td><code>cannot locate ecosystem root</code></td><td>You’re outside an ecosystem</td><td>Pass <code>--ecosystem &#x3C;path></code> or <code>cd</code> into one</td></tr><tr><td><code>claude --bg not on PATH</code></td><td>Claude Code binary missing or older</td><td>Update Claude Code; or use dry-run + manual spawn</td></tr><tr><td>Cycle detected at <code>swarm start</code></td><td><code>ecosystem.json</code> has a dependency cycle in your impacted set</td><td>Fix <code>ecosystem.json</code>; or split the cycle into two swarms</td></tr><tr><td>Pre-merge surfaced conflicts</td><td>Two waves changed overlapping code</td><td>Resolve manually before the real merge; rerun verify</td></tr><tr><td>Inbox item never closed</td><td>Supervisor halted waiting</td><td><code>/swarm inbox resolve &#x3C;id> --answer "..."</code></td></tr></tbody></table>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/ecosystem/">Ecosystem mode</a> — the state layer that swarm reads</li>
+<li><a href="/orchestration/">Orchestration</a> — scout / dispatch / handoff / continue, the lighter-weight cross-project verbs</li>
+<li><a href="/concepts/">Concepts</a> — phases, initiatives, history, the building blocks swarm composes</li>
+</ul> </article> <nav class="prevnext"> <a class="pn pn-prev" href="/team/"> <span class="pn-dir">← Previous</span> <span class="pn-title">Team mode</span> </a> <a class="pn pn-next" href="/faq/"> <span class="pn-dir">Next →</span> <span class="pn-title">FAQ</span> </a> </nav> </div> </main> <!-- ON THIS PAGE --> <aside class="toc"> <div class="toc-inner"> <p class="side-label">On this page</p> <a class="toc-link" href="#when-to-use-a-swarm" data-toc="when-to-use-a-swarm"> When to use a swarm </a><a class="toc-link" href="#when-not-to-use-a-swarm" data-toc="when-not-to-use-a-swarm"> When NOT to use a swarm </a><a class="toc-link" href="#architecture--files-as-channels-no-daemon" data-toc="architecture--files-as-channels-no-daemon"> Architecture — files-as-channels, no daemon </a><a class="toc-link" href="#indexing--the-load-bearing-efficiency-design" data-toc="indexing--the-load-bearing-efficiency-design"> Indexing — the load-bearing efficiency design </a><a class="toc-link" href="#three-modes" data-toc="three-modes"> Three modes </a><a class="toc-link" href="#eight-intervention-patterns" data-toc="eight-intervention-patterns"> Eight intervention patterns </a><a class="toc-link" href="#subcommands" data-toc="subcommands"> Subcommands </a><a class="toc-link sub" href="#swarm-start-slug---initiative-slug---repos-r1r2---phase-phase-slug---mode-checkpointautopilot" data-toc="swarm-start-slug---initiative-slug---repos-r1r2---phase-phase-slug---mode-checkpointautopilot"> /swarm start &lt;slug&gt; --initiative &lt;slug&gt; --repos r1,r2,... --phase &lt;phase-slug&gt; [--mode checkpoint|autopilot] </a><a class="toc-link sub" href="#swarm-status-swarm-id" data-toc="swarm-status-swarm-id"> /swarm status &lt;swarm-id&gt; </a><a class="toc-link sub" href="#swarm-tell-swarm-id-repo-text" data-toc="swarm-tell-swarm-id-repo-text"> /swarm tell &lt;swarm-id&gt; &lt;repo&gt; &quot;&lt;text&gt;&quot; </a><a class="toc-link sub" href="#swarm-broadcast-swarm-id-text" data-toc="swarm-broadcast-swarm-id-text"> /swarm broadcast &lt;swarm-id&gt; &quot;&lt;text&gt;&quot; </a><a class="toc-link sub" href="#swarm-inbox-list-swarm-id--write--resolve" data-toc="swarm-inbox-list-swarm-id--write--resolve"> /swarm inbox list &lt;swarm-id&gt; / write / resolve </a><a class="toc-link sub" href="#swarm-verify-swarm-id" data-toc="swarm-verify-swarm-id"> /swarm verify &lt;swarm-id&gt; </a><a class="toc-link sub" href="#swarm-preview-merge-swarm-id" data-toc="swarm-preview-merge-swarm-id"> /swarm preview-merge &lt;swarm-id&gt; </a><a class="toc-link sub" href="#swarm-budget-swarm-id-repo-n---n" data-toc="swarm-budget-swarm-id-repo-n---n"> /swarm budget &lt;swarm-id&gt; &lt;repo&gt; +N | -N </a><a class="toc-link sub" href="#swarm-complete-swarm-id" data-toc="swarm-complete-swarm-id"> /swarm complete &lt;swarm-id&gt; </a><a class="toc-link sub" href="#swarm-resume-swarm-id---session-id" data-toc="swarm-resume-swarm-id---session-id"> /swarm resume &lt;swarm-id&gt; [--session &lt;id&gt;] </a><a class="toc-link sub" href="#swarm-cancel-swarm-id---reason-text" data-toc="swarm-cancel-swarm-id---reason-text"> /swarm cancel &lt;swarm-id&gt; [--reason &quot;&lt;text&gt;&quot;] </a><a class="toc-link" href="#worked-example--3-project-linear-feature" data-toc="worked-example--3-project-linear-feature"> Worked example — 3-project linear feature </a><a class="toc-link" href="#recovering-after-a-session-kill" data-toc="recovering-after-a-session-kill"> Recovering after a session kill </a><a class="toc-link" href="#whats-next-phase-175--v0201" data-toc="whats-next-phase-175--v0201"> What’s next (Phase 17.5 — v0.20.1) </a><a class="toc-link" href="#troubleshooting" data-toc="troubleshooting"> Troubleshooting </a><a class="toc-link" href="#related" data-toc="related"> Related </a> </div> </aside> </div>  <div class="palette" data-palette hidden> <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search"> <div class="palette-head"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="ic" data-icon="lucide:search">   <use href="#ai:lucide:search"></use>  </svg> <input type="text" data-palette-input placeholder="Search pages and headings…" aria-label="Search pages and headings"> <kbd>esc</kbd> </div> <div class="palette-results" data-palette-results></div> </div> </div> <script type="application/json" id="mm-nav-data">{"pages":[{"slug":"getting-started","label":"Getting started","group":"Start here"},{"slug":"concepts","label":"Concepts","group":"Start here"},{"slug":"parallel-work","label":"Parallel work","group":"Start here"},{"slug":"skills","label":"Skills","group":"Reference"},{"slug":"rules","label":"Rules","group":"Reference"},{"slug":"ide-support","label":"IDE support","group":"Reference"},{"slug":"ecosystem","label":"Ecosystem","group":"Orchestration"},{"slug":"orchestration","label":"Cross-project actions","group":"Orchestration"},{"slug":"team","label":"Team mode","group":"Orchestration"},{"slug":"swarm","label":"Swarm","group":"Orchestration"},{"slug":"faq","label":"FAQ","group":"More"},{"slug":"about","label":"About","group":"More"}],"headings":[{"id":"when-to-use-a-swarm","label":"When to use a swarm"},{"id":"when-not-to-use-a-swarm","label":"When NOT to use a swarm"},{"id":"architecture--files-as-channels-no-daemon","label":"Architecture — files-as-channels, no daemon"},{"id":"indexing--the-load-bearing-efficiency-design","label":"Indexing — the load-bearing efficiency design"},{"id":"three-modes","label":"Three modes"},{"id":"eight-intervention-patterns","label":"Eight intervention patterns"},{"id":"subcommands","label":"Subcommands"},{"id":"swarm-start-slug---initiative-slug---repos-r1r2---phase-phase-slug---mode-checkpointautopilot","label":"/swarm start <slug> --initiative <slug> --repos r1,r2,... --phase <phase-slug> [--mode checkpoint|autopilot]"},{"id":"swarm-status-swarm-id","label":"/swarm status <swarm-id>"},{"id":"swarm-tell-swarm-id-repo-text","label":"/swarm tell <swarm-id> <repo> \"<text>\""},{"id":"swarm-broadcast-swarm-id-text","label":"/swarm broadcast <swarm-id> \"<text>\""},{"id":"swarm-inbox-list-swarm-id--write--resolve","label":"/swarm inbox list <swarm-id> / write / resolve"},{"id":"swarm-verify-swarm-id","label":"/swarm verify <swarm-id>"},{"id":"swarm-preview-merge-swarm-id","label":"/swarm preview-merge <swarm-id>"},{"id":"swarm-budget-swarm-id-repo-n---n","label":"/swarm budget <swarm-id> <repo> +N | -N"},{"id":"swarm-complete-swarm-id","label":"/swarm complete <swarm-id>"},{"id":"swarm-resume-swarm-id---session-id","label":"/swarm resume <swarm-id> [--session <id>]"},{"id":"swarm-cancel-swarm-id---reason-text","label":"/swarm cancel <swarm-id> [--reason \"<text>\"]"},{"id":"worked-example--3-project-linear-feature","label":"Worked example — 3-project linear feature"},{"id":"recovering-after-a-session-kill","label":"Recovering after a session kill"},{"id":"whats-next-phase-175--v0201","label":"What’s next (Phase 17.5 — v0.20.1)"},{"id":"troubleshooting","label":"Troubleshooting"},{"id":"related","label":"Related"}]}</script> </div></body></html>  <script type="module">const h=document.documentElement;for(const e of document.querySelectorAll("[data-toggle-theme]"))e.addEventListener("click",()=>{const t=h.dataset.theme==="dark"?"light":"dark";h.dataset.theme=t;try{localStorage.setItem("mm-theme",t)}catch{}});const g=document.querySelector(".docs-grid");for(const e of document.querySelectorAll("[data-toggle-sidebar]"))e.addEventListener("click",()=>g?.classList.toggle("nav-open"));document.querySelector("[data-sidebar-scrim]")?.addEventListener("click",()=>g?.classList.remove("nav-open"));for(const e of document.querySelectorAll(".doc pre")){const t=document.createElement("button");t.type="button",t.className="code-copy",t.textContent="Copy",t.addEventListener("click",()=>{const o=e.querySelector("code")?.innerText??e.innerText;navigator.clipboard?.writeText(o),t.textContent="Copied",window.setTimeout(()=>t.textContent="Copy",1200)}),e.appendChild(t)}const p=[...document.querySelectorAll(".toc-link")];if(p.length){const e=p.map(o=>o.getAttribute("data-toc")),t=()=>{let o=e[0];for(const n of e){const l=n&&document.getElementById(n);l&&l.getBoundingClientRect().top<=130&&(o=n)}for(const n of p)n.classList.toggle("active",n.getAttribute("data-toc")===o)};window.addEventListener("scroll",t,{passive:!0}),t()}const i=document.querySelector("[data-palette]"),r=document.querySelector("[data-palette-input]"),c=document.querySelector("[data-palette-results]");let f={pages:[],headings:[]};try{f=JSON.parse(document.getElementById("mm-nav-data")?.textContent||"{}")}catch{}function w(e){const t=e.trim().toLowerCase(),o=(f.headings||[]).map(a=>({icon:"hash",label:a.label,sub:"On this page",href:"#"+a.id,jump:!0})),n=(f.pages||[]).map(a=>({icon:"file",label:a.label,sub:a.group,href:"/"+a.slug+"/"}));let l=[...o,...n];return t&&(l=l.filter(a=>a.label.toLowerCase().includes(t)||(a.sub||"").toLowerCase().includes(t))),l.slice(0,8)}let s=0;function m(e){if(!c)return;if(!e.length){c.innerHTML='<div class="pal-empty">No matches</div>';return}const t='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>',o='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';c.innerHTML=e.map((n,l)=>`<a class="pal-item${l===s?" active":""}" href="${n.href}" data-i="${l}"${n.jump?' data-jump="1"':""}>${n.icon==="hash"?t:o}<span class="pal-label">${n.label}</span><span class="pal-sub">${n.sub}</span></a>`).join("")}let d=[];function y(){d=w(r&&"value"in r?r.value:""),s=0,m(d)}function v(){i&&(i.hidden=!1,r&&(r.value="",y(),setTimeout(()=>r.focus(),20)))}function u(){i&&(i.hidden=!0)}function b(e){if(e)if(e.dataset.jump){u();const t=e.getAttribute("href").slice(1),o=document.getElementById(t);o&&window.scrollTo({top:o.getBoundingClientRect().top+window.scrollY-76,behavior:"smooth"})}else window.location.href=e.getAttribute("href")}for(const e of document.querySelectorAll("[data-open-palette]"))e.addEventListener("click",v);r?.addEventListener("input",y);i?.addEventListener("click",e=>{e.target===i&&u()});c?.addEventListener("click",e=>{const t=e.target.closest(".pal-item");t&&t.dataset.jump&&(e.preventDefault(),b(t))});window.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k")e.preventDefault(),i&&i.hidden?v():u();else if(e.key==="Escape")u();else if(!i?.hidden){const t=[...c?.querySelectorAll(".pal-item")||[]];if(!t.length)return;e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,m(d)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,m(d)):e.key==="Enter"&&(e.preventDefault(),b(t[s]))}});</script>

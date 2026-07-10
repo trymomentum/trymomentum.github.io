@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="/brand/png/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/brand/png/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/brand/png/momentum-app-180.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0023ae"><link rel="canonical" href="https://trymomentum.github.io/getting-started/"><title>Getting started — momentum docs</title><meta name="description" content="Install momentum, scaffold a project, and run your first phase end-to-end. About 15 minutes from zero to verified release."><meta property="og:type" content="website"><meta property="og:title" content="Getting started — momentum docs"><meta property="og:description" content="Install momentum, scaffold a project, and run your first phase end-to-end. About 15 minutes from zero to verified release."><meta property="og:url" content="https://trymomentum.github.io/getting-started/"><meta property="og:image" content="https://trymomentum.github.io/og/default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Getting started — momentum docs"><meta name="twitter:description" content="Install momentum, scaffold a project, and run your first phase end-to-end. About 15 minutes from zero to verified release."><meta name="twitter:image" content="https://trymomentum.github.io/og/default.png"><script>(function(){try{var t=localStorage.getItem('mm-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:'light';}catch(e){document.documentElement.dataset.theme='light';}})();</script><script>(function(){try{if(sessionStorage.getItem('mm-swept')){document.documentElement.classList.add('mm-swept');}else{sessionStorage.setItem('mm-swept','1');}}catch(e){}})();</script><link rel="stylesheet" href="/_astro/Icon.CfDLM5Ju.css">
+<link rel="stylesheet" href="/_astro/_..D1_BWr6T.css"></head> <body> <div class="ambient-layer" aria-hidden="true"></div> <div class="page mm-docs">  <header class="tb"> <nav class="tb-pillbar"> <a class="mm-brand tb-brand" href="/" aria-label="momentum"> <svg class="mm-mark" viewBox="0 0 48 48" width="24" height="24" fill="none" aria-hidden="true"> <path class="c c1" d="M11 15 20 24 11 33"></path> <path class="c c2" d="M20 15 29 24 20 33"></path> <path class="c c3" d="M29 15 38 24 29 33"></path> </svg> <span class="mm-word">momentum</span>  <span class="tb-pill">docs</span>  </a>  <script type="module">const t=document.documentElement;t.classList.contains("mm-swept")||window.setTimeout(()=>t.classList.add("mm-swept"),850);const s=window.matchMedia("(prefers-reduced-motion: reduce)");for(const e of document.querySelectorAll(".mm-brand"))e.addEventListener("mouseenter",()=>{s.matches||(e.classList.remove("mm-sweep"),e.getBoundingClientRect(),e.classList.add("mm-sweep"))});</script> <button type="button" class="tb-search" data-open-palette aria-label="Search docs"> <svg width="1em" height="1em" class="ic" data-icon="lucide:search">   <symbol id="ai:lucide:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:lucide:search"></use>  </svg> <span>Search docs</span> <kbd>⌘K</kbd> </button> <div class="tb-right"> <button type="button" class="tb-icon tb-menu" data-toggle-sidebar aria-label="Toggle navigation"> <svg width="1em" height="1em" class="ic" data-icon="lucide:menu">   <symbol id="ai:lucide:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></symbol><use href="#ai:lucide:menu"></use>  </svg> </button> <button type="button" class="tb-icon" data-toggle-theme aria-label="Toggle theme"> <svg width="1em" height="1em" class="ic" data-icon="lucide:sun-moon">   <symbol id="ai:lucide:sun-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m2.837 12.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4m7-3l-1.256 1.256M20 12h2"/></symbol><use href="#ai:lucide:sun-moon"></use>  </svg> </button> <a class="tb-icon" href="https://github.com/LiminaLabsAI/momentum" target="_blank" rel="noopener" aria-label="GitHub"> <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"></path></svg> </a> </div> </nav> </header> <div class="docs-grid" id="top"> <!-- SIDEBAR --> <aside class="sidebar" data-sidebar> <nav> <div class="side-group"> <p class="side-label">Start here</p> <a class="side-link active" href="/getting-started/" aria-current="page"> Getting started </a><a class="side-link" href="/concepts/"> Concepts </a><a class="side-link" href="/parallel-work/"> Parallel work </a> </div><div class="side-group"> <p class="side-label">Reference</p> <a class="side-link" href="/skills/"> Skills </a><a class="side-link" href="/rules/"> Rules </a><a class="side-link" href="/ide-support/"> IDE support </a> </div><div class="side-group"> <p class="side-label">Orchestration</p> <a class="side-link" href="/ecosystem/"> Ecosystem </a><a class="side-link" href="/orchestration/"> Cross-project actions </a><a class="side-link" href="/team/"> Team mode </a><a class="side-link" href="/swarm/"> Swarm </a> </div><div class="side-group"> <p class="side-label">More</p> <a class="side-link" href="/faq/"> FAQ </a><a class="side-link" href="/about/"> About </a> </div> </nav> </aside> <div class="sidebar-scrim" data-sidebar-scrim aria-hidden="true"></div> <!-- ARTICLE --> <main class="article"> <div class="doc-wrap"> <div class="doc-crumb"> Start here<span class="sep">›</span><span class="cur">Getting started</span> </div> <div class="doc-head"> <h1>Getting started</h1> </div> <p class="doc-lead">Install momentum, scaffold a project, and run your first phase end-to-end. About 15 minutes from zero to verified release.</p> <article class="doc"> <p>momentum is an open-source state layer for agentic AI. Install it once,
+let your agent do the rest. This page walks you through installation,
+scaffolding, and a full first-phase walkthrough so you’ve seen the whole
+loop before you trust it with real work. The tutorial below uses a
+coding-flavored example because that’s the most concrete path today, but
+the same loop (<code>/brainstorm-phase</code> → <code>/start-phase</code> → <code>/complete-phase</code>)
+applies to agents that manage infrastructure, run research, or handle
+data pipelines.</p>
+<p>By the end you’ll have a project with <code>specs/</code>, your agent’s primary
+instruction file, the 13 autonomous rules in place, and a first phase
+brainstormed, started, executed, and (optionally) released.</p>
+<h2 id="install">Install</h2>
+<p>momentum ships as an npm package — <code>@limina-labs/momentum</code>. The fastest
+path is <code>npx</code>:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span></span></code></pre>
+<p>Or install globally if you’ll run it repeatedly:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npm</span><span style="color:#A5D6FF"> install</span><span style="color:#79C0FF"> -g</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span></span>
+<span class="line"><span style="color:#FFA657">momentum</span><span style="color:#A5D6FF"> init</span></span></code></pre>
+<p>Both work. <code>npx</code> is one-shot — no global install, just runs once. <code>-g</code>
+keeps the <code>momentum</code> binary on <code>PATH</code> for repeat use
+(<code>momentum upgrade</code>, <code>momentum doctor</code>, etc.). Pick whichever fits your flow.</p>
+<aside class="doc-aside doc-aside--note"><p class="doc-aside__title">Always pin <code>@latest</code></p><p>A bare <code>npx @limina-labs/momentum</code> can serve a <strong>stale, cached</strong> version,
+and a stale global install shadows newer releases. Pinning <code>@latest</code> forces npm
+to resolve the newest published version. This matters because <code>momentum upgrade</code> copies files from the <em>installed</em> CLI — your project files are only
+ever as new as the CLI itself.</p></aside>
+<h3 id="which-agent-are-you-using">Which agent are you using?</h3>
+<p><code>momentum init</code> asks which agent to scaffold for — there is no default.
+Pass <code>--agent</code> to answer up front (required in CI and other non-interactive
+shells):</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> claude-code</span><span style="color:#8B949E">   # Claude Code</span></span>
+<span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> opencode</span><span style="color:#8B949E">      # opencode</span></span>
+<span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> codex</span><span style="color:#8B949E">         # Codex</span></span>
+<span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --agent</span><span style="color:#A5D6FF"> antigravity</span><span style="color:#8B949E">   # Antigravity</span></span></code></pre>
+<p>Cursor adapter planned for a later Reach wave. See <a href="/ide-support/">IDE
+support</a> for which adapter is the right fit for your setup.</p>
+<h3 id="ecosystem-mode-opt-in">Ecosystem mode (opt-in)</h3>
+<p>If you have multiple related repos and want them to coordinate, pass
+<code>--ecosystem</code> to bootstrap an ecosystem alongside the first member:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">npx</span><span style="color:#A5D6FF"> @limina-labs/momentum@latest</span><span style="color:#A5D6FF"> init</span><span style="color:#79C0FF"> --ecosystem</span><span style="color:#A5D6FF"> my-eco</span></span></code></pre>
+<p>This creates <code>../my-eco/</code> as a sibling git repo + registers the current
+project as its first member. See <a href="/ecosystem/">Ecosystem mode</a> for the deep
+dive. <strong>Single-project usage is the default</strong> — if you don’t pass
+<code>--ecosystem</code>, nothing about ecosystems appears anywhere.</p>
+<h2 id="what-gets-scaffolded">What gets scaffolded</h2>
+<p>After <code>init</code>, your project has:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>my-project/</span></span>
+<span class="line"><span>├── specs/                  # status, phases, backlog, decisions, changelog</span></span>
+<span class="line"><span>│   ├── status.md           # ← first file your agent reads (Rule 1)</span></span>
+<span class="line"><span>│   ├── backlog/</span></span>
+<span class="line"><span>│   ├── phases/</span></span>
+<span class="line"><span>│   ├── decisions/</span></span>
+<span class="line"><span>│   └── changelog/</span></span>
+<span class="line"><span>├── .agent/</span></span>
+<span class="line"><span>│   └── rules/</span></span>
+<span class="line"><span>│       └── project.md      # 13 autonomous agent rules</span></span>
+<span class="line"><span>├── .claude/                # Claude Code adapter (varies by --agent flag)</span></span>
+<span class="line"><span>│   ├── commands/           # 15+ slash commands</span></span>
+<span class="line"><span>│   ├── settings.json       # PreToolUse / PostToolUse / SessionStart hooks</span></span>
+<span class="line"><span>│   └── ...</span></span>
+<span class="line"><span>├── CLAUDE.md               # primary agent instruction file (or AGENTS.md)</span></span>
+<span class="line"><span>└── scripts/                # hook scripts (brainstorm-gate, history-reminder)</span></span></code></pre>
+<p>For <strong>Codex</strong>, you get <code>AGENTS.md</code> + <code>.codex/</code> (config + hooks). For
+<strong>Antigravity</strong>, <code>AGENTS.md</code> only (no hook surface today). All variants
+share the same <code>specs/</code> and <code>.agent/</code> skeleton.</p>
+<p>One thing is deliberately <strong>missing</strong>: there’s no <code>specs/vision/</code> and no
+roadmap. momentum never ships placeholder foundation docs — the charter,
+principles, success criteria, and roadmap are <em>authored</em> at founding by
+<code>/start-project</code> (see Step 2). Until then, <code>specs/status.md</code> reads
+“Not founded” and phase commands route you to founding first.</p>
+<h2 id="your-first-phase--end-to-end">Your first phase — end-to-end</h2>
+<p>This is the loop. Run it once and you’ve seen everything momentum does.</p>
+<h3 id="step-1--open-your-agent">Step 1 — Open your agent</h3>
+<p>Open opencode, Claude Code, Codex, or Antigravity in the project directory you just
+scaffolded. The agent should load <code>CLAUDE.md</code> (or <code>AGENTS.md</code>) automatically
+at session start. That file pulls in the 13 rules from
+<code>.agent/rules/project.md</code>.</p>
+<p>To verify the agent is oriented: ask “what phase is this project on?” The
+agent should read <code>specs/status.md</code> and answer — that’s Rule 1 (Always
+Orient First) firing.</p>
+<h3 id="step-2--found-the-project">Step 2 — Found the project</h3>
+<p>A fresh install is <strong>not founded</strong> yet: no charter or roadmap exists, and
+<code>specs/status.md</code> says so. Foundation docs are authored from your actual
+idea, never scaffolded as templates.</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> /brainstorm-idea</span></span></code></pre>
+<p>Explore the idea in conversation — nothing is written to disk. When it’s
+settled:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> /start-project</span></span></code></pre>
+<p>The agent drafts the charter, principles, success criteria, and roadmap
+from the brainstorm, shows you the full draft, writes it only on your
+approval, and plans Phase 0. It also authors <code>specs/config.md</code> — the
+project-shape settings (git forge, publish target, branch flow, test/build
+commands) recipe templates read at execution time, so gates and release
+steps adapt to your project instead of assuming npm + GitHub. Phase
+commands stop and route you here until the project is founded.</p>
+<h3 id="step-3--brainstorm-the-phase">Step 3 — Brainstorm the phase</h3>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> /brainstorm-phase</span></span></code></pre>
+<p>The agent reads <code>specs/status.md</code>, scans the backlog for P0/P1 bugs, and
+asks you scoping questions one at a time:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Reading specs/status.md... no active phase.</span></span>
+<span class="line"><span>Checking backlog... no P0 blockers.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>What's the goal of this phase?</span></span>
+<span class="line"><span>> add memory persistence to the agent platform</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>What are the 2-3 deliverables that would mean "done"?</span></span>
+<span class="line"><span>> ...</span></span></code></pre>
+<p><strong>Important — the brainstorm gate</strong>: while <code>/brainstorm-phase</code> is running,
+the PreToolUse hook <strong>physically blocks</strong> any Write/Edit on <code>specs/</code> paths.
+The agent drafts in conversation only. Nothing gets committed to disk until
+you explicitly say “approve.”</p>
+<p>This is the <strong>visible safety</strong> behind discipline: the agent can’t
+accidentally pre-commit to a half-finished plan even if it wanted to.</p>
+<p>When the draft is ready, the agent shows you the full overview, plan,
+tasks, and history skeleton. You say “approve” — the sentinel file gets
+removed and the files land on disk in one batch + the brainstorm gets
+committed.</p>
+<h3 id="step-4--start-the-phase">Step 4 — Start the phase</h3>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> /start-phase</span></span></code></pre>
+<p>Now the <strong>autonomous execution contract</strong> kicks in:</p>
+<ol>
+<li>Branch created (<code>phase-N-shortname</code>).</li>
+<li>Phase setup commits — status.md updated, index.json updated,
+phases/README.md updated, changelog entry appended.</li>
+<li>Group 0 implementation — the agent reads its own <code>plan.md</code> and starts
+working through the groups.</li>
+<li>After each group: verification runs, tasks get marked <code>[x]</code>, history
+entry appended, commit lands with the group’s commit message, push to
+origin.</li>
+<li>Groups 1, 2, 3, … execute in order (parallel where the plan declares
+parallel).</li>
+<li>After the final group: <strong>STOP</strong>. The only hard-stop in the contract is
+the merge + release gate.</li>
+</ol>
+<p>Throughout, your agent narrates what it’s doing. You can interrupt anytime
+— the contract is “proceed silently unless interrupted,” not “execute
+without communication.”</p>
+<h3 id="step-5--watch-the-discipline-land">Step 5 — Watch the discipline land</h3>
+<p>While <code>/start-phase</code> runs, observe:</p>
+<ul>
+<li><strong><code>tasks.md</code></strong> updates per group — <code>[x]</code> for done, <code>[/]</code> for in-progress.</li>
+<li><strong><code>history.md</code></strong> grows — <code>[DECISION]</code>, <code>[DISCOVERY]</code>, <code>[NOTE]</code> entries
+capturing the <em>why</em> of each meaningful change.</li>
+<li><strong>Git log</strong> shows clean conventional commits with per-group messages.</li>
+<li><strong><code>status.md</code></strong> reflects current phase and progress.</li>
+</ul>
+<p>If the agent discovers a bug or tech debt during the phase (Rule 3), it
+adds the item to <code>backlog.md</code> immediately and tells you. You don’t need to
+ask.</p>
+<h3 id="step-6--complete-the-phase">Step 6 — Complete the phase</h3>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> /complete-phase</span></span></code></pre>
+<p>The agent runs verification: tests, lint, typecheck, smoke tests, whatever
+the phase’s acceptance criteria specify. It reads the actual output (Rule
+12 — Verify Before Claim). Only if everything passes does it proceed:</p>
+<ul>
+<li>Writes <code>retrospective.md</code> with evidence + what worked / what didn’t /
+deviations / discoveries.</li>
+<li>Updates <code>status.md</code> (Current Phase → between phases; Latest Release →
+vX.Y.Z).</li>
+<li>Bumps <code>package.json</code> version.</li>
+<li>Runs <code>/sync-docs</code> to propagate history into other specs.</li>
+<li>Opens a PR phase → main; asks for your merge approval.</li>
+<li>After merge: tags <code>vX.Y.Z</code> on main; asks for your <code>npm publish</code> approval.</li>
+</ul>
+<p>You’re in the loop for the merge and the publish; the rest happens
+automatically.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="permission-denied-on-hooks">Permission denied on hooks</h3>
+<p>Hook scripts under <code>scripts/</code> need to be executable. Run once after install:</p>
+<pre class="astro-code github-dark-default" style="background-color:#0d1117;color:#e6edf3; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFA657">chmod</span><span style="color:#A5D6FF"> +x</span><span style="color:#A5D6FF"> scripts/</span><span style="color:#79C0FF">*</span><span style="color:#A5D6FF">.sh</span></span></code></pre>
+<h3 id="appledouble-_-files-appearing-in-output">AppleDouble (<code>._*</code>) files appearing in output</h3>
+<p>Common on external drives (HFS+ / SMB). <code>momentum init</code> skips them when
+scaffolding; they’re already in the project’s <code>.gitignore</code>. If your build
+tooling complains about them, configure it to ignore <code>._*</code> too.</p>
+<h3 id="momentum-upgrade-overwrote-my-claudemd-title"><code>momentum upgrade</code> overwrote my CLAUDE.md title</h3>
+<p>Known regression — see <a href="https://github.com/LiminaLabsAI/momentum/blob/main/specs/backlog/backlog.md">BUG-006</a>.
+The title line and intro paragraph in <code>CLAUDE.md</code> sit inside the
+upgrade-managed section and get replaced with the generic template’s
+<code>&#x3C;Project Name></code> placeholder. Workaround: restore manually after upgrade.</p>
+<p>A fix is on the backlog — candidates: detect from <code>package.json</code>,
+treat the title block as preserved, or add a <code>## Project Identity</code> section
+the upgrade leaves untouched.</p>
+<h3 id="my-agent-is-ignoring-the-rules">My agent is ignoring the rules</h3>
+<p>The rules live in <code>.agent/rules/project.md</code>, referenced from <code>CLAUDE.md</code>
+(or <code>AGENTS.md</code>). If your agent doesn’t auto-load the instruction file at
+session start, momentum can’t help — confirm the file is in the directory
+the agent was launched from and that it’s being read.</p>
+<p>For Claude Code, verify <code>.claude/settings.json</code> is present and the hooks
+are wired. Without the hooks, the brainstorm-gate (Rule 7) loses its
+physical enforcement layer (the markdown contract still applies, but the
+safety net is gone).</p>
+<h3 id="should-i-worry-about-the-brainstorm-gate-sentinel">”Should I worry about the brainstorm-gate sentinel?”</h3>
+<p>No. <code>.momentum/brainstorm-active</code> is a temporary file created at the start
+of <code>/brainstorm-phase</code> and removed when you approve the draft. If a
+brainstorm session is interrupted, the sentinel may persist — running
+<code>/brainstorm-phase</code> again is fine; the agent handles cleanup. Manually
+deleting the sentinel without an approval recreates the failure mode.
+Let the workflow remove it.</p>
+<h2 id="next">Next</h2>
+<ul>
+<li><a href="/concepts/">Concepts</a> — the five primitives (phases, backlog, history,
+ADRs, ecosystem) in depth.</li>
+<li><a href="/skills/">Skills</a> — every slash command, what it does, and an example.</li>
+<li><a href="/rules/">Rules</a> — the 13 autonomous agent rules with full text + red
+flags + counters.</li>
+<li><a href="/ide-support/">IDE support</a> — per-agent setup details and hook compatibility.</li>
+<li><a href="/ecosystem/">Ecosystem mode</a> — when and how to coordinate across projects.</li>
+<li><a href="/orchestration/">Orchestration</a> — scout / dispatch / handoff / continue
+for cross-project work.</li>
+</ul> </article> <nav class="prevnext"> <span></span> <a class="pn pn-next" href="/concepts/"> <span class="pn-dir">Next →</span> <span class="pn-title">Concepts</span> </a> </nav> </div> </main> <!-- ON THIS PAGE --> <aside class="toc"> <div class="toc-inner"> <p class="side-label">On this page</p> <a class="toc-link" href="#install" data-toc="install"> Install </a><a class="toc-link sub" href="#which-agent-are-you-using" data-toc="which-agent-are-you-using"> Which agent are you using? </a><a class="toc-link sub" href="#ecosystem-mode-opt-in" data-toc="ecosystem-mode-opt-in"> Ecosystem mode (opt-in) </a><a class="toc-link" href="#what-gets-scaffolded" data-toc="what-gets-scaffolded"> What gets scaffolded </a><a class="toc-link" href="#your-first-phase--end-to-end" data-toc="your-first-phase--end-to-end"> Your first phase — end-to-end </a><a class="toc-link sub" href="#step-1--open-your-agent" data-toc="step-1--open-your-agent"> Step 1 — Open your agent </a><a class="toc-link sub" href="#step-2--found-the-project" data-toc="step-2--found-the-project"> Step 2 — Found the project </a><a class="toc-link sub" href="#step-3--brainstorm-the-phase" data-toc="step-3--brainstorm-the-phase"> Step 3 — Brainstorm the phase </a><a class="toc-link sub" href="#step-4--start-the-phase" data-toc="step-4--start-the-phase"> Step 4 — Start the phase </a><a class="toc-link sub" href="#step-5--watch-the-discipline-land" data-toc="step-5--watch-the-discipline-land"> Step 5 — Watch the discipline land </a><a class="toc-link sub" href="#step-6--complete-the-phase" data-toc="step-6--complete-the-phase"> Step 6 — Complete the phase </a><a class="toc-link" href="#troubleshooting" data-toc="troubleshooting"> Troubleshooting </a><a class="toc-link sub" href="#permission-denied-on-hooks" data-toc="permission-denied-on-hooks"> Permission denied on hooks </a><a class="toc-link sub" href="#appledouble-_-files-appearing-in-output" data-toc="appledouble-_-files-appearing-in-output"> AppleDouble (._*) files appearing in output </a><a class="toc-link sub" href="#momentum-upgrade-overwrote-my-claudemd-title" data-toc="momentum-upgrade-overwrote-my-claudemd-title"> momentum upgrade overwrote my CLAUDE.md title </a><a class="toc-link sub" href="#my-agent-is-ignoring-the-rules" data-toc="my-agent-is-ignoring-the-rules"> My agent is ignoring the rules </a><a class="toc-link sub" href="#should-i-worry-about-the-brainstorm-gate-sentinel" data-toc="should-i-worry-about-the-brainstorm-gate-sentinel"> ”Should I worry about the brainstorm-gate sentinel?” </a><a class="toc-link" href="#next" data-toc="next"> Next </a> </div> </aside> </div>  <div class="palette" data-palette hidden> <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search"> <div class="palette-head"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="ic" data-icon="lucide:search">   <use href="#ai:lucide:search"></use>  </svg> <input type="text" data-palette-input placeholder="Search pages and headings…" aria-label="Search pages and headings"> <kbd>esc</kbd> </div> <div class="palette-results" data-palette-results></div> </div> </div> <script type="application/json" id="mm-nav-data">{"pages":[{"slug":"getting-started","label":"Getting started","group":"Start here"},{"slug":"concepts","label":"Concepts","group":"Start here"},{"slug":"parallel-work","label":"Parallel work","group":"Start here"},{"slug":"skills","label":"Skills","group":"Reference"},{"slug":"rules","label":"Rules","group":"Reference"},{"slug":"ide-support","label":"IDE support","group":"Reference"},{"slug":"ecosystem","label":"Ecosystem","group":"Orchestration"},{"slug":"orchestration","label":"Cross-project actions","group":"Orchestration"},{"slug":"team","label":"Team mode","group":"Orchestration"},{"slug":"swarm","label":"Swarm","group":"Orchestration"},{"slug":"faq","label":"FAQ","group":"More"},{"slug":"about","label":"About","group":"More"}],"headings":[{"id":"install","label":"Install"},{"id":"which-agent-are-you-using","label":"Which agent are you using?"},{"id":"ecosystem-mode-opt-in","label":"Ecosystem mode (opt-in)"},{"id":"what-gets-scaffolded","label":"What gets scaffolded"},{"id":"your-first-phase--end-to-end","label":"Your first phase — end-to-end"},{"id":"step-1--open-your-agent","label":"Step 1 — Open your agent"},{"id":"step-2--found-the-project","label":"Step 2 — Found the project"},{"id":"step-3--brainstorm-the-phase","label":"Step 3 — Brainstorm the phase"},{"id":"step-4--start-the-phase","label":"Step 4 — Start the phase"},{"id":"step-5--watch-the-discipline-land","label":"Step 5 — Watch the discipline land"},{"id":"step-6--complete-the-phase","label":"Step 6 — Complete the phase"},{"id":"troubleshooting","label":"Troubleshooting"},{"id":"permission-denied-on-hooks","label":"Permission denied on hooks"},{"id":"appledouble-_-files-appearing-in-output","label":"AppleDouble (._*) files appearing in output"},{"id":"momentum-upgrade-overwrote-my-claudemd-title","label":"momentum upgrade overwrote my CLAUDE.md title"},{"id":"my-agent-is-ignoring-the-rules","label":"My agent is ignoring the rules"},{"id":"should-i-worry-about-the-brainstorm-gate-sentinel","label":"”Should I worry about the brainstorm-gate sentinel?”"},{"id":"next","label":"Next"}]}</script> </div></body></html>  <script type="module">const h=document.documentElement;for(const e of document.querySelectorAll("[data-toggle-theme]"))e.addEventListener("click",()=>{const t=h.dataset.theme==="dark"?"light":"dark";h.dataset.theme=t;try{localStorage.setItem("mm-theme",t)}catch{}});const g=document.querySelector(".docs-grid");for(const e of document.querySelectorAll("[data-toggle-sidebar]"))e.addEventListener("click",()=>g?.classList.toggle("nav-open"));document.querySelector("[data-sidebar-scrim]")?.addEventListener("click",()=>g?.classList.remove("nav-open"));for(const e of document.querySelectorAll(".doc pre")){const t=document.createElement("button");t.type="button",t.className="code-copy",t.textContent="Copy",t.addEventListener("click",()=>{const o=e.querySelector("code")?.innerText??e.innerText;navigator.clipboard?.writeText(o),t.textContent="Copied",window.setTimeout(()=>t.textContent="Copy",1200)}),e.appendChild(t)}const p=[...document.querySelectorAll(".toc-link")];if(p.length){const e=p.map(o=>o.getAttribute("data-toc")),t=()=>{let o=e[0];for(const n of e){const l=n&&document.getElementById(n);l&&l.getBoundingClientRect().top<=130&&(o=n)}for(const n of p)n.classList.toggle("active",n.getAttribute("data-toc")===o)};window.addEventListener("scroll",t,{passive:!0}),t()}const i=document.querySelector("[data-palette]"),r=document.querySelector("[data-palette-input]"),c=document.querySelector("[data-palette-results]");let f={pages:[],headings:[]};try{f=JSON.parse(document.getElementById("mm-nav-data")?.textContent||"{}")}catch{}function w(e){const t=e.trim().toLowerCase(),o=(f.headings||[]).map(a=>({icon:"hash",label:a.label,sub:"On this page",href:"#"+a.id,jump:!0})),n=(f.pages||[]).map(a=>({icon:"file",label:a.label,sub:a.group,href:"/"+a.slug+"/"}));let l=[...o,...n];return t&&(l=l.filter(a=>a.label.toLowerCase().includes(t)||(a.sub||"").toLowerCase().includes(t))),l.slice(0,8)}let s=0;function m(e){if(!c)return;if(!e.length){c.innerHTML='<div class="pal-empty">No matches</div>';return}const t='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>',o='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>';c.innerHTML=e.map((n,l)=>`<a class="pal-item${l===s?" active":""}" href="${n.href}" data-i="${l}"${n.jump?' data-jump="1"':""}>${n.icon==="hash"?t:o}<span class="pal-label">${n.label}</span><span class="pal-sub">${n.sub}</span></a>`).join("")}let d=[];function y(){d=w(r&&"value"in r?r.value:""),s=0,m(d)}function v(){i&&(i.hidden=!1,r&&(r.value="",y(),setTimeout(()=>r.focus(),20)))}function u(){i&&(i.hidden=!0)}function b(e){if(e)if(e.dataset.jump){u();const t=e.getAttribute("href").slice(1),o=document.getElementById(t);o&&window.scrollTo({top:o.getBoundingClientRect().top+window.scrollY-76,behavior:"smooth"})}else window.location.href=e.getAttribute("href")}for(const e of document.querySelectorAll("[data-open-palette]"))e.addEventListener("click",v);r?.addEventListener("input",y);i?.addEventListener("click",e=>{e.target===i&&u()});c?.addEventListener("click",e=>{const t=e.target.closest(".pal-item");t&&t.dataset.jump&&(e.preventDefault(),b(t))});window.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k")e.preventDefault(),i&&i.hidden?v():u();else if(e.key==="Escape")u();else if(!i?.hidden){const t=[...c?.querySelectorAll(".pal-item")||[]];if(!t.length)return;e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,m(d)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,m(d)):e.key==="Enter"&&(e.preventDefault(),b(t[s]))}});</script>
